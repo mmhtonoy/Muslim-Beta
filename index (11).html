@@ -1,0 +1,5283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- ZOOM FIX -->
+<meta name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+
+<meta name="theme-color" content="#061612">
+<title>MUSLIM</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Serif+Bengali:wght@400;600;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --b:#061612;
+ --c:#0d2821;
+ --g:#d6b66a;
+ --w:#f7f5ed;
+ --m:#8da29a;
+ --l:rgba(214,182,106,.16)
+}
+
+*{
+ box-sizing:border-box;
+ -webkit-tap-highlight-color:transparent;
+}
+
+html{
+ width:100%;
+ min-height:100%;
+ overflow-x:hidden;
+ touch-action:manipulation;
+ -webkit-text-size-adjust:100%;
+ text-size-adjust:100%;
+}
+
+body{
+ margin:0;
+ width:100%;
+ min-height:100%;
+ background:var(--b);
+ color:var(--w);
+ font-family:'Noto Serif Bengali',serif;
+ padding-bottom:105px;
+ overflow-x:hidden;
+}
+
+button{
+ font-family:inherit;
+ touch-action:manipulation;
+}
+
+/* LOADING */
+
+#load{
+ position:fixed;
+ inset:0;
+ z-index:9999;
+ background:linear-gradient(145deg,#03100c,#071b16);
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ flex-direction:column;
+ text-align:center;
+ padding:20px;
+ transition:.7s
+}
+
+#load.hide{
+ opacity:0;
+ visibility:hidden
+}
+
+.la{
+ max-width:340px;
+ margin-bottom:25px
+}
+
+.ar{
+ font-family:'Scheherazade New','Amiri';
+ color:#f0d994;
+ font-size:26px;
+ line-height:1.8
+}
+
+.tr{
+ font-size:11px;
+ color:#aebdb7
+}
+
+.logo{
+ width:82px;
+ height:82px;
+ border:1px solid var(--g);
+ border-radius:50%;
+ display:grid;
+ place-items:center;
+ position:relative
+}
+
+.logo:before{
+ content:"";
+ width:36px;
+ height:36px;
+ border:5px solid var(--g);
+ border-right-color:transparent;
+ border-radius:50%;
+ transform:rotate(-35deg)
+}
+
+.logo:after{
+ content:"";
+ position:absolute;
+ width:8px;
+ height:8px;
+ background:var(--g);
+ border-radius:50%;
+ top:20px;
+ right:20px
+}
+
+.lt{
+ margin-top:18px;
+ color:#f0d994;
+ letter-spacing:6px;
+ font:24px Georgia
+}
+
+.ls{
+ font-size:11px;
+ color:#80968e;
+ margin-top:4px
+}
+
+.spin{
+ width:32px;
+ height:32px;
+ border:2px solid #21443a;
+ border-top-color:var(--g);
+ border-radius:50%;
+ margin-top:20px;
+ animation:s 1s linear infinite
+}
+
+@keyframes s{
+ to{transform:rotate(360deg)}
+}
+
+.locspin{
+ width:10px;
+ height:10px;
+ border:2px solid #21443a;
+ border-top-color:var(--g);
+ border-radius:50%;
+ animation:s .8s linear infinite;
+ flex-shrink:0
+}
+
+/* TOP */
+
+.top{
+ padding:20px 17px 8px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ position:relative;
+ z-index:70
+}
+
+.moreWrap{position:relative}
+.moreBtn{
+ width:39px;height:39px;border:1px solid var(--l);
+ background:var(--c);border-radius:12px;color:var(--g);
+ display:grid;place-items:center;font-size:20px;line-height:1;
+ box-shadow:0 7px 20px #0004
+}
+.moreBtn:active{transform:scale(.95)}
+.moreMenu{
+ position:absolute;right:0;top:47px;width:190px;display:none;
+ background:#0b211b;border:1px solid var(--l);border-radius:16px;
+ padding:7px;box-shadow:0 18px 40px #0009;
+ backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)
+}
+.moreMenu.show{display:block;animation:secIn .22s ease}
+.moreMenu button{
+ width:100%;border:0;background:transparent;color:#eee;text-align:left;
+ padding:11px 10px;border-radius:11px;font-size:10px
+}
+.moreMenu button:active{background:#123027}
+.moreMenu small{display:block;color:#81978f;font-size:7px;margin-top:3px}
+
+.brand{
+ display:flex;
+ align-items:center;
+ gap:10px
+}
+
+.bm{
+ width:37px;
+ height:37px;
+ border:1px solid var(--g);
+ border-radius:50%;
+ display:grid;
+ place-items:center
+}
+
+.bm:before{
+ content:"";
+ width:16px;
+ height:16px;
+ border:3px solid var(--g);
+ border-right-color:transparent;
+ border-radius:50%;
+ transform:rotate(-35deg)
+}
+
+.bn{
+ color:#f0d994;
+ letter-spacing:3px;
+ font:16px Georgia
+}
+
+.loc{
+ font-size:9px;
+ color:var(--m)
+}
+
+/* SECTIONS */
+
+.sec{
+ display:none;
+ padding:0 16px;
+}
+
+.sec.on{
+ display:block;
+ animation:secIn .45s cubic-bezier(.22,.9,.32,1)
+}
+
+@keyframes secIn{
+ 0%{opacity:0;transform:translateY(14px) scale(.985)}
+ 100%{opacity:1;transform:none}
+}
+
+/* HOME */
+
+.bism{
+ text-align:center;
+ padding:8px 0 17px
+}
+
+.bism .ar{
+ font-size:27px
+}
+
+.ayahRow{
+  display:block;
+  position:relative;
+  margin-top:14px
+}
+
+.ayNav{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:4;
+  width:32px;
+  height:38px;
+  border:1px solid #d6b66a3a;
+  background:#0b241d;
+  border-radius:11px;
+  color:var(--g);
+  font-size:22px;
+  display:grid;
+  place-items:center;
+  box-shadow:0 5px 16px #0005
+}
+
+.ayNav:first-child{left:9px}
+.ayNav:last-child{right:9px}
+
+.ayNav:active{
+  transform:translateY(-50%) scale(.94);
+  background:#12372b
+}
+
+.ayah{
+  width:100%;
+  min-width:0;
+  margin:0;
+  padding:15px 52px 17px;
+  background:linear-gradient(145deg,#102d25,#0a211a);
+  border:1px solid #d6b66a44;
+  border-radius:20px;
+  box-shadow:0 10px 30px #0005;
+  min-height:112px;
+  position:relative
+}
+
+.ayTop{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ margin-bottom:7px
+}
+
+.ayLabel{
+ font-size:7px;
+ letter-spacing:1.6px;
+ color:#71877f
+}
+
+.ayCopy{
+ width:24px;
+ height:24px;
+ flex-shrink:0;
+ border:1px solid var(--l);
+ border-radius:8px;
+ background:#d6b66a0c;
+ color:#d6b66a;
+ font-size:11px
+}
+
+.ayCopy.ok{
+ background:#d6b66a22;
+ color:#f0d994
+}
+
+.ayDots{
+ display:flex;
+ justify-content:center;
+ gap:5px;
+ margin-top:11px
+}
+
+.ayDots span{
+ width:5px;
+ height:5px;
+ border-radius:50%;
+ background:#2c463c;
+ transition:.3s
+}
+
+.ayDots span.on{
+ background:var(--g);
+ box-shadow:0 0 6px #d6b66a99
+}
+
+.ayah .ar{
+ font-size:21px
+}
+
+.ayah .tr{
+ margin-top:4px;
+ line-height:1.5
+}
+
+.fadeAyah{
+ animation:ayahIn .8s ease
+}
+
+@keyframes ayahIn{
+ 0%{opacity:0;transform:translateY(10px) scale(.98)}
+ 60%{opacity:1;transform:translateY(-2px) scale(1.01)}
+ 100%{opacity:1;transform:none}
+}
+
+/* INFO */
+
+.info{
+ display:grid;
+ grid-template-columns:1.35fr .9fr;
+ gap:9px
+}
+
+.card{
+ background:var(--c);
+ border:1px solid var(--l);
+ border-radius:18px;
+ box-shadow:0 8px 25px #0003
+}
+
+.remain{
+ padding:15px;
+ position:relative;
+ overflow:hidden
+}
+
+.remain:after{
+ content:"";
+ position:absolute;
+ inset:0;
+ border-radius:18px;
+ box-shadow:inset 0 0 25px #d6b66a08;
+ pointer-events:none
+}
+
+.small{
+ font-size:9px;
+ color:#81978f;
+ letter-spacing:1.3px
+}
+
+.rname{
+ font:20px Georgia;
+ color:#f0d994;
+ margin-top:7px
+}
+
+.rtime{
+ font:25px Georgia;
+ margin-top:5px
+}
+
+.until{
+ font-size:9px;
+ color:#81978f
+}
+
+/* CURRENT TIME */
+
+.clock{
+ margin-top:9px;
+ padding-top:7px;
+ border-top:1px solid var(--l);
+ font-family:'Scheherazade New','Amiri',Georgia;
+ font-size:18px;
+ color:#e6d59e;
+ letter-spacing:.5px;
+ direction:ltr;
+ white-space:nowrap
+}
+
+.clock small{
+ display:block;
+ font:7px Georgia;
+ color:#71877f;
+ letter-spacing:1px;
+ margin-bottom:1px
+}
+
+.clockdate{
+ display:block;
+ font:9px Georgia;
+ color:#9db2aa;
+ letter-spacing:.5px;
+ margin-top:2px
+}
+
+.cycle{
+ position:absolute;
+ right:12px;
+ top:12px;
+ color:#71877f;
+ font-size:8px
+}
+
+.prayAnim{
+ animation:prayChange .65s ease
+}
+
+@keyframes prayChange{
+ 0%{
+  opacity:0;
+  transform:translateX(15px);
+  filter:blur(3px)
+ }
+ 55%{
+  opacity:1;
+  transform:translateX(-2px);
+  filter:blur(0)
+ }
+ 100%{transform:none}
+}
+
+/* SMALL HIJRI CARD */
+
+.hijri{
+ padding:12px;
+ text-align:center;
+ display:flex;
+ flex-direction:column;
+ justify-content:center
+}
+
+.hlabel{
+ font-size:8px;
+ color:#81978f;
+ letter-spacing:1px
+}
+
+.hday{
+ font-size:9px;
+ color:#b7c5bf;
+ margin-top:4px
+}
+
+.hdate{
+ font:24px 'Scheherazade New';
+ color:#f0d994
+}
+
+.hmonth{
+ font:13px 'Scheherazade New';
+ color:#e6d59e;
+ font-weight:600
+}
+
+.hbn{
+ font-size:8px;
+ color:#aebdb7
+}
+
+.hyear{
+ font:11px 'Scheherazade New';
+ color:#81978f
+}
+
+.hybn{
+ font-size:8px;
+ color:#81978f
+}
+
+.hmk{
+ margin-top:8px;
+ padding-top:7px;
+ border-top:1px solid var(--l);
+ font-size:8px;
+ color:#81978f;
+ letter-spacing:.5px
+}
+
+.hmk b{
+ display:block;
+ font:13px Georgia;
+ color:#f0d994;
+ margin-top:2px;
+ font-weight:400
+}
+
+/* PRAYER */
+
+.head{
+ display:flex;
+ justify-content:space-between;
+ margin:16px 2px 9px
+}
+
+.head h2{
+ margin:0;
+ font:15px Georgia
+}
+
+.head span{
+ font-size:9px;
+ color:#71877f
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:9px
+}
+
+.pc{
+ background:var(--c);
+ border:1px solid var(--l);
+ border-radius:16px;
+ padding:14px;
+ min-height:92px;
+ overflow:hidden;
+ position:relative
+}
+
+.pn{
+ font-size:15px;
+ font-family:Georgia,serif;
+ color:#f0d994;
+ display:flex;
+ align-items:baseline;
+ flex-wrap:wrap;
+ gap:6px
+}
+
+.par{
+ font-family:'Scheherazade New','Amiri';
+ font-size:15px;
+ color:#c9b877;
+ direction:rtl
+}
+
+.pt{
+ font-size:13px;
+ font-family:Georgia,serif;
+ color:#cddbd4;
+ margin-top:8px;
+ letter-spacing:.3px
+}
+
+.pmk{
+ font-size:8px;
+ color:#81978f;
+ margin-top:6px;
+ padding-top:6px;
+ border-top:1px solid var(--l);
+ letter-spacing:.3px
+}
+
+.j{
+ grid-column:1/-1;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ min-height:75px
+}
+
+.badge{
+ font-size:7px;
+ color:var(--g);
+ border:1px solid var(--l);
+ padding:5px;
+ border-radius:7px
+}
+
+/* NAV */
+
+.nav{
+ position:fixed;
+ z-index:50;
+ bottom:11px;
+ left:11px;
+ right:11px;
+ height:67px;
+ border:1px solid var(--l);
+ border-radius:22px;
+ background:#081d17f2;
+ backdrop-filter:blur(18px);
+ -webkit-backdrop-filter:blur(18px);
+ display:grid;
+ grid-template-columns:repeat(5,1fr)
+}
+
+.nav button{
+ border:0;
+ background:none;
+ color:#71877f;
+ font-size:8px;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ gap:4px
+}
+
+.nav svg{
+ width:21px;
+ height:21px;
+ fill:none;
+ stroke:currentColor;
+ stroke-width:1.6;
+ stroke-linecap:round;
+ stroke-linejoin:round
+}
+
+.nav .on{
+ color:#f0d994
+}
+
+/* PAGE HEADER */
+
+.pg{
+ text-align:center;
+ padding:17px 0 15px;
+ position:relative
+}
+
+.pg h1{
+ margin:0;
+ font:21px Georgia;
+ letter-spacing:3px;
+ color:#f0d994
+}
+
+.pg p{
+ font-size:9px;
+ color:#81978f;
+ margin:5px
+}
+
+.back{
+ position:absolute;
+ left:0;
+ top:16px;
+ width:36px;
+ height:36px;
+ border:1px solid var(--l);
+ background:var(--c);
+ border-radius:11px;
+ color:var(--g);
+ font-size:21px
+}
+
+/* QURAN LIST */
+
+.slist{
+ display:flex;
+ flex-direction:column;
+ gap:7px;
+ padding-bottom:10px
+}
+
+.surah{
+ width:100%;
+ border:1px solid var(--l);
+ background:var(--c);
+ color:#eee;
+ border-radius:14px;
+ padding:11px;
+ display:flex;
+ align-items:center;
+ gap:12px;
+ text-align:left
+}
+
+.sn{
+ width:34px;
+ height:34px;
+ border:1px solid var(--l);
+ border-radius:10px;
+ display:grid;
+ place-items:center;
+ color:var(--g);
+ font:11px Georgia;
+ flex-shrink:0
+}
+
+.sname{
+ font:13px Georgia
+}
+
+.sar{
+ margin-left:auto;
+ font:20px 'Scheherazade New';
+ color:#d8c987;
+ direction:rtl
+}
+
+/* READER */
+
+.reader{
+ position:fixed;
+ inset:0;
+ z-index:80;
+ background:#061612;
+ display:none;
+ flex-direction:column
+}
+
+.reader.show{
+ display:flex
+}
+
+.rh{
+ height:65px;
+ flex-shrink:0;
+ display:flex;
+ align-items:center;
+ gap:10px;
+ padding:0 15px;
+ border-bottom:1px solid var(--l)
+}
+
+.close{
+ width:37px;
+ height:37px;
+ border:1px solid var(--l);
+ background:var(--c);
+ border-radius:11px;
+ color:var(--g);
+ font-size:21px
+}
+
+.rt h2{
+ margin:0;
+ font:16px Georgia;
+ color:#f0d994
+}
+
+.rt span{
+ font-size:8px;
+ color:#71877f
+}
+
+.rb{
+ overflow:auto;
+ -webkit-overflow-scrolling:touch;
+ padding:18px 15px 30px
+}
+
+.ayahbox{
+ background:var(--c);
+ border:1px solid var(--l);
+ border-radius:16px;
+ padding:14px;
+ margin-bottom:8px;
+ position:relative
+}
+
+.abhead{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ margin-bottom:10px
+}
+
+.anum{
+ font-size:9px;
+ letter-spacing:1px;
+ color:var(--g)
+}
+
+.qara{
+ direction:rtl;
+ text-align:right;
+ font:25px 'Scheherazade New';
+ line-height:2;
+ color:#eee4c5;
+ padding-right:3px;
+ user-select:text;
+ -webkit-user-select:text
+}
+
+.qtr{
+ margin-top:8px;
+ color:#aebdb7;
+ font-size:10px;
+ line-height:1.7;
+ direction:ltr;
+ text-align:left;
+ user-select:text
+}
+
+.copy{
+ position:static;
+ width:28px;
+ height:28px;
+ border:1px solid var(--l);
+ border-radius:9px;
+ background:#d6b66a0c;
+ color:#d6b66a;
+ font-size:13px;
+ flex-shrink:0;
+ z-index:2
+}
+
+.copy.ok{
+ background:#d6b66a22;
+ color:#f0d994
+}
+
+/* DUA */
+
+.duas{
+ display:flex;
+ flex-direction:column;
+ gap:9px;
+ padding-bottom:15px
+}
+
+.dua{
+ background:var(--c);
+ border:1px solid var(--l);
+ border-radius:17px;
+ padding:16px
+}
+
+.di{
+ width:36px;
+ height:36px;
+ border:1px solid var(--l);
+ border-radius:10px;
+ display:grid;
+ place-items:center;
+ color:var(--g);
+ font-size:17px
+}
+
+.dua h3{
+ font:13px Georgia;
+ color:#f0d994
+}
+
+.dua .ar{
+ direction:rtl;
+ text-align:right;
+ font-size:22px
+}
+
+.dua p{
+ font-size:10px;
+ color:#91a59d;
+ line-height:1.7
+}
+
+/* RELAXING DUA AUDIO */
+.audioList{display:flex;flex-direction:column;gap:10px;padding-bottom:18px}
+.audioCard{background:linear-gradient(145deg,#102d25,#0a211a);border:1px solid var(--l);border-radius:18px;padding:14px;box-shadow:0 8px 24px #0003;position:relative;overflow:hidden}
+.audioTop{display:flex;align-items:center;gap:11px}
+.audioIcon{width:43px;height:43px;flex:0 0 43px;border:1px solid var(--l);border-radius:13px;display:grid;place-items:center;color:var(--g);background:#d6b66a0c;font-size:17px}
+.audioInfo{min-width:0;flex:1}
+.audioName{font:14px Georgia;color:#f0d994;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.audioMeta{font-size:8px;color:#81978f;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.audioAyah{font-size:7px;color:#b9aa73;margin-top:3px}
+.audioPlay{width:39px;height:39px;border:1px solid var(--l);border-radius:12px;background:#d6b66a12;color:var(--g);font-size:15px;display:grid;place-items:center;flex-shrink:0}
+.audioPlay:active{transform:scale(.94)}
+.audioProgress{width:100%;margin-top:13px;accent-color:#d6b66a;height:4px}
+.audioTimes{display:flex;justify-content:space-between;margin-top:4px;font:7px Georgia;color:#71877f}
+.audioHint{text-align:center;font-size:8px;color:#71877f;margin:2px 2px 12px;line-height:1.6}
+
+/* TASBIH */
+
+.tmenu{
+ position:relative;
+ margin-bottom:15px;
+ z-index:20
+}
+
+.tselect{
+ width:100%;
+ background:var(--c);
+ border:1px solid var(--l);
+ border-radius:15px;
+ padding:12px 14px;
+ color:#f0d994;
+ text-align:left;
+ display:flex;
+ align-items:center;
+ justify-content:space-between
+}
+
+.tselect .selpreview{
+ display:flex;
+ flex-direction:column
+}
+
+.tselect .ar{
+ font-size:20px
+}
+
+.tselect .en{
+ font:9px Georgia;
+ color:#81978f
+}
+
+.arrow{
+ font-size:15px;
+ transition:.3s
+}
+
+.tmenu.open .arrow{
+ transform:rotate(180deg)
+}
+
+.opts{
+ display:none;
+ flex-direction:column;
+ gap:6px;
+ position:absolute;
+ z-index:100;
+ left:0;
+ right:0;
+ top:58px;
+ background:#0b211b;
+ border:1px solid var(--l);
+ border-radius:15px;
+ padding:7px;
+ padding-bottom:14px;
+ box-shadow:0 15px 35px #0008;
+ max-height:calc(100vh - 190px - 100px);
+ overflow-y:auto;
+ -webkit-overflow-scrolling:touch;
+ overscroll-behavior:contain
+}
+
+.tmenu.open .opts{
+ display:flex
+}
+
+.opt{
+ position:relative;
+ width:100%;
+ background:transparent;
+ border:0;
+ border-bottom:1px solid #d6b66a0b;
+ border-radius:10px;
+ padding:9px 10px;
+ text-align:left;
+ color:white;
+ flex-shrink:0
+}
+
+.opt:last-child{
+ border-bottom:0
+}
+
+.opt.sel{
+ background:#123027
+}
+
+.opt .ar{
+ display:block;
+ text-align:right;
+ font-size:19px
+}
+
+.opt .en{
+ display:block;
+ color:#81978f;
+ font:9px Georgia
+}
+
+.mark{
+ position:absolute;
+ right:10px;
+ top:50%;
+ width:6px;
+ height:6px;
+ background:var(--g);
+ border-radius:50%;
+ opacity:0
+}
+
+.sel .mark{
+ opacity:1
+}
+
+.tw{
+ text-align:center;
+ padding-bottom:25px
+}
+
+.circle{
+ width:250px;
+ height:250px;
+ border-radius:50%;
+ margin:auto;
+ display:grid;
+ place-items:center;
+ position:relative;
+ background:radial-gradient(circle,#173b30,#092019 72%);
+ border:1px solid #d6b66a99;
+ box-shadow:
+ 0 0 0 9px #d6b66a08,
+ 0 0 35px #0005
+}
+
+.circle:before{
+ content:"";
+ position:absolute;
+ inset:7px;
+ border:1px solid #d6b66a22;
+ border-radius:50%
+}
+
+.circle:after{
+ content:"";
+ position:absolute;
+ inset:13px;
+ border:1px dashed #d6b66a55;
+ border-radius:50%
+}
+
+.inner{
+ width:180px;
+ height:180px;
+ border-radius:50%;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ border:1px solid #d6b66a44;
+ background:#0d2921;
+ z-index:1
+}
+
+.count{
+ font:50px Georgia;
+ color:#f0d994
+}
+
+@keyframes countPop{
+ 0%{transform:scale(1)}
+ 40%{transform:scale(1.32);color:#fff2c9}
+ 100%{transform:scale(1)}
+}
+
+.count.pop{
+ animation:countPop .38s cubic-bezier(.34,1.56,.64,1)
+}
+
+@keyframes circleRing{
+ 0%{box-shadow:0 0 0 0 #d6b66a66,0 0 0 9px #d6b66a08,0 0 35px #0005}
+ 100%{box-shadow:0 0 0 16px #d6b66a00,0 0 0 9px #d6b66a08,0 0 35px #0005}
+}
+
+.circle.pulse{
+ animation:circleRing .55s ease-out
+}
+
+@keyframes innerFlash{
+ 0%{background:#173b30}
+ 100%{background:#0d2921}
+}
+
+.inner.flash{
+ animation:innerFlash .4s ease-out
+}
+
+.selar{
+ font:17px 'Scheherazade New';
+ color:#e2d39f;
+ direction:rtl
+}
+
+.selen{
+ font:9px Georgia;
+ color:#91a59d;
+ margin-top:3px
+}
+
+.reset{
+ margin-top:18px;
+ border:1px solid var(--l);
+ background:var(--c);
+ color:#b8c6c0;
+ border-radius:11px;
+ padding:8px 17px;
+ font-size:9px
+}
+
+/* FULL CALENDAR */
+
+.calendar{
+ margin-top:15px;
+ background:var(--c);
+ border:1px solid var(--l);
+ border-radius:20px;
+ padding:14px;
+ box-shadow:0 8px 25px #0003;
+ margin-bottom:10px;
+ overflow:hidden
+}
+
+.calnav{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:7px
+}
+
+.calbtn{
+ width:38px;
+ height:36px;
+ border:1px solid var(--l);
+ background:#102d25;
+ color:var(--g);
+ border-radius:11px;
+ font-size:18px
+}
+
+.calcenter{
+ flex:1;
+ text-align:center
+}
+
+.cal-greg{
+ font:15px Georgia;
+ color:#f0d994
+}
+
+.cal-greg-bn{
+ font-size:8px;
+ color:#81978f;
+ margin-top:2px
+}
+
+.todayBtn{
+ display:block;
+ margin:8px auto 0;
+ border:1px solid var(--l);
+ background:#102d25;
+ color:#d6b66a;
+ border-radius:9px;
+ padding:5px 12px;
+ font-size:8px
+}
+
+.calh{
+ text-align:center;
+ margin:13px 0 10px;
+ padding:9px;
+ background:#102d25;
+ border:1px solid #d6b66a0b;
+ border-radius:13px
+}
+
+.cal-ar{
+ font:21px 'Scheherazade New';
+ color:#f0d994
+}
+
+.cal-bn{
+ font-size:10px;
+ color:#aebdb7
+}
+
+.cal-year{
+ font:10px 'Scheherazade New';
+ color:#81978f;
+ margin-top:2px
+}
+
+.cal-range{
+ font-size:7px;
+ color:#71877f;
+ margin-top:3px
+}
+
+.week{
+ display:grid;
+ grid-template-columns:repeat(7,1fr);
+ gap:4px;
+ margin-bottom:5px
+}
+
+.week div{
+ text-align:center;
+ font-size:7px;
+ color:#81978f;
+ padding:4px 0
+}
+
+.days{
+ display:grid;
+ grid-template-columns:repeat(7,1fr);
+ gap:4px
+}
+
+.day{
+ min-width:0;
+ min-height:55px;
+ border:1px solid #d6b66a0b;
+ border-radius:9px;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ background:#0b211b;
+ cursor:pointer;
+ padding:3px 1px;
+ position:relative
+}
+
+.day .gd{
+ font:16px Georgia;
+ color:#eee4c5;
+ line-height:1
+}
+
+.day .hd{
+ font:11px 'Scheherazade New';
+ color:#d8c987;
+ margin-top:3px;
+ line-height:1.1
+}
+
+.day .hmn{
+ font-size:5.5px;
+ color:#71877f;
+ max-width:100%;
+ white-space:nowrap;
+ overflow:hidden;
+ text-overflow:ellipsis;
+ margin-top:2px
+}
+
+.day.today{
+ background:#173a2f;
+ border-color:#d6b66a66;
+ box-shadow:inset 0 0 14px #d6b66a0b
+}
+
+.day.today .gd{
+ color:#f0d994
+}
+
+.day.selected{
+ border-color:#d6b66a;
+ box-shadow:0 0 0 1px #d6b66a33
+}
+
+.empty{
+ background:transparent;
+ border-color:transparent;
+ cursor:default
+}
+
+.selectedDate{
+ margin-top:12px;
+ padding:13px;
+ border-radius:15px;
+ background:#102d25;
+ border:1px solid #d6b66a22;
+ text-align:center
+}
+
+.sd-title{
+ font-size:8px;
+ color:#81978f;
+ letter-spacing:1px
+}
+
+.sd-g{
+ font:14px Georgia;
+ color:#f0d994;
+ margin-top:4px
+}
+
+.sd-h{
+ font:18px 'Scheherazade New';
+ color:#e6d59e;
+ margin-top:2px
+}
+
+.sd-bn{
+ font-size:9px;
+ color:#aebdb7;
+ margin-top:2px;
+ line-height:1.5
+}
+
+/* MOON PHASE — PREMIUM */
+
+.moonDisc{
+ position:relative;
+ border-radius:50%;
+ overflow:hidden;
+ flex-shrink:0;
+ background:#050e0b;
+ box-shadow:0 0 22px #d6b66a3a,0 4px 14px #0007,inset 0 0 10px #0008
+}
+
+.moonDisc.mini{
+ box-shadow:0 0 4px #d6b66a4a
+}
+
+.moonBase{
+ position:absolute;
+ inset:0;
+ border-radius:50%;
+ background:
+  radial-gradient(circle at 62% 68%,#0000 0 9%,#00000022 10% 11%,#0000 12%),
+  radial-gradient(circle at 32% 62%,#0000 0 5%,#00000020 6% 7%,#0000 8%),
+  radial-gradient(circle at 58% 28%,#0000 0 4%,#0000001c 5% 6%,#0000 7%),
+  radial-gradient(circle at 40% 25%,#fffdf2,#f3e6b8 32%,#d8c37f 62%,#a8925a 100%)
+}
+
+.moonDisc.mini .moonBase{
+ background:radial-gradient(circle at 38% 30%,#fbeec2,#e7cf8e 55%,#b79a5e 100%)
+}
+
+.moonShadow{
+ position:absolute;
+ inset:0;
+ border-radius:50%;
+ background:radial-gradient(circle at 50% 50%,#0c1c17 55%,#04100c 100%);
+ transition:transform .4s ease
+}
+
+.moonPanel{
+ margin-top:2px;
+ margin-bottom:14px;
+ padding:16px 14px;
+ border-radius:18px;
+ background:linear-gradient(160deg,#10241d,#0a1913);
+ border:1px solid #d6b66a2e;
+ box-shadow:0 10px 28px #0005,inset 0 0 30px #d6b66a08
+}
+
+.moonPanelHead{
+ text-align:center;
+ letter-spacing:1.4px;
+ margin-bottom:12px
+}
+
+.moonMainRow{
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ gap:14px
+}
+
+.moonMainCol{
+ text-align:center;
+ flex-shrink:0
+}
+
+.moonNextCol{
+ text-align:center;
+ flex-shrink:0;
+ opacity:.88
+}
+
+.moonArrow{
+ color:#5f766d;
+ font-size:16px
+}
+
+.moonPhaseName{
+ margin-top:9px;
+ font:13px Georgia;
+ color:#f0d994
+}
+
+.moonPhaseNameBn{
+ font-size:9px;
+ color:#aebdb7;
+ margin-top:1px
+}
+
+.moonNextLabel{
+ margin-top:7px;
+ font-size:8px;
+ letter-spacing:1px;
+ color:#81978f
+}
+
+.moonStats{
+ display:flex;
+ flex-wrap:wrap;
+ justify-content:center;
+ gap:5px;
+ margin-top:8px;
+ max-width:170px
+}
+
+.moonStats span{
+ font-size:7.5px;
+ color:#c9d6cf;
+ background:#0d241d;
+ border:1px solid #d6b66a26;
+ padding:3px 7px;
+ border-radius:20px
+}
+
+.moonStatsSmall{
+ display:flex;
+ justify-content:center;
+ gap:4px;
+ margin-top:6px
+}
+
+.moonStatsSmall span{
+ font-size:7px;
+ color:#9fb2aa;
+ background:#0d241d;
+ border:1px solid #d6b66a1c;
+ padding:2px 6px;
+ border-radius:20px
+}
+
+.moonEventsGrid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:7px;
+ margin-top:14px;
+ padding-top:12px;
+ border-top:1px solid #d6b66a22
+}
+
+.moonEvent{
+ text-align:center;
+ padding:8px 4px;
+ border-radius:12px;
+ background:#0d241d;
+ border:1px solid #d6b66a1c
+}
+
+.moonEvent.me-eclipse{
+ border-color:#c9707066;
+ background:#2a1414
+}
+
+.me-label{
+ font-size:6.3px;
+ letter-spacing:.6px;
+ color:#81978f
+}
+
+.me-date{
+ font-size:9px;
+ color:#e6d59e;
+ margin-top:5px;
+ line-height:1.3
+}
+
+.me-count{
+ font-size:6.8px;
+ color:#71877f;
+ margin-top:3px
+}
+
+.moonEvent.me-eclipse .me-date{
+ color:#e79a9a
+}
+
+.day .moonDisc.mini{
+ width:13px;
+ height:13px;
+ margin:2px auto 0
+}
+
+.day.day-fullmoon{
+ border-color:#d6b66a99;
+ box-shadow:0 0 0 1px #d6b66a55,inset 0 0 10px #d6b66a1a
+}
+
+.day.day-newmoon{
+ border-color:#3a4d45
+}
+
+.day.day-eclipse{
+ border-color:#c9707077;
+ box-shadow:0 0 0 1px #c9707044
+}
+
+.day-badge{
+ position:absolute;
+ top:3px;
+ right:4px;
+ font-size:6px;
+ color:#e79a9a
+}
+
+/* MORE / COMPASS */
+
+.util{
+ background:var(--c);
+ border:1px solid var(--l);
+ border-radius:18px;
+ padding:17px;
+ display:flex;
+ align-items:center;
+ gap:13px;
+ margin-top:5px
+}
+
+.ui{
+ width:45px;
+ height:45px;
+ border:1px solid var(--l);
+ border-radius:13px;
+ display:grid;
+ place-items:center;
+ color:var(--g)
+}
+
+.ut h3{
+ margin:0;
+ font:14px Georgia
+}
+
+.ut p{
+ margin:4px 0 0;
+ font-size:9px;
+ color:#81978f
+}
+
+.cp{
+ display:none;
+ background:var(--c);
+ border:1px solid var(--l);
+ border-radius:20px;
+ padding:18px;
+ text-align:center;
+ margin-top:10px
+}
+
+.cp.show{
+ display:block
+}
+
+#calWrap{
+ padding:0;
+ background:transparent;
+ border:0;
+ box-shadow:none;
+ text-align:left
+}
+
+.comp{
+  width:270px;
+  height:270px;
+  border-radius:50%;
+  margin:5px auto 18px;
+  position:relative;
+  border:1px solid #d6b66a99;
+  background:
+    radial-gradient(circle at 50% 50%,#173d31 0 18%,transparent 18.5%),
+    radial-gradient(circle,#102e25 0,#081c16 67%,#05110d 100%);
+  box-shadow:
+    0 0 0 8px #d6b66a0a,
+    0 0 45px #d6b66a18,
+    inset 0 0 40px #0008;
+  overflow:hidden
+}
+
+.comp:before{
+  content:"";
+  position:absolute;
+  inset:13px;
+  border:1px solid #d6b66a38;
+  border-radius:50%;
+  box-shadow:inset 0 0 0 7px #d6b66a05;
+  z-index:1
+}
+
+.comp:after{
+  content:"";
+  position:absolute;
+  inset:35px;
+  border:1px dashed #d6b66a42;
+  border-radius:50%;
+  animation:slowSpin 55s linear infinite;
+  z-index:1
+}
+
+.kaabaMark{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:42px;
+  height:42px;
+  transform:translate(-50%,-50%);
+  z-index:5;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  background:linear-gradient(145deg,#11110f,#030303);
+  border:1px solid #d6b66a99;
+  box-shadow:0 0 0 5px #d6b66a0b,0 0 22px #d6b66a22;
+}
+
+.kaabaMark:before{
+  content:"";
+  width:26px;
+  height:24px;
+  background:linear-gradient(#151515 0 29%,#d6b66a 30% 37%,#090909 38%);
+  border:1px solid #8e7a3e;
+  clip-path:polygon(12% 10%,88% 10%,100% 24%,94% 90%,6% 90%,0 24%);
+  box-shadow:inset 0 0 0 2px #050505;
+}
+
+.kaabaMark:after{
+  content:"";
+  position:absolute;
+  width:8px;
+  height:10px;
+  bottom:7px;
+  background:#d6b66a;
+  clip-path:polygon(15% 0,85% 0,100% 100%,0 100%);
+  opacity:.8
+}
+
+@keyframes slowSpin{
+ to{transform:rotate(360deg)}
+}
+
+.sweep{
+ position:absolute;
+ inset:0;
+ border-radius:50%;
+ background:conic-gradient(from 0deg,#d6b66a3d,transparent 34deg,transparent 360deg);
+ opacity:0;
+ pointer-events:none;
+ transition:opacity .4s;
+ z-index:1
+}
+
+.comp.active .sweep{
+ opacity:1;
+ animation:sweep 3.2s linear infinite
+}
+
+@keyframes sweep{
+ to{transform:rotate(360deg)}
+}
+
+.ticks{
+ position:absolute;
+ inset:6px;
+ border-radius:50%;
+ background:
+  repeating-conic-gradient(
+   from 0deg,
+   #f0d994 0deg .8deg,
+   transparent .8deg 30deg
+  ),
+  repeating-conic-gradient(
+   from 0deg,
+   #d6b66a55 0deg .5deg,
+   transparent .5deg 10deg
+  );
+ -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 16px),#000 calc(100% - 15px));
+ mask:radial-gradient(farthest-side,transparent calc(100% - 16px),#000 calc(100% - 15px));
+ pointer-events:none
+}
+
+.dial{
+ position:absolute;
+ inset:0;
+ transition:transform .25s cubic-bezier(.22,.9,.32,1);
+ z-index:2
+}
+
+.tick{
+ position:absolute;
+ left:50%;
+ top:50%;
+ width:1px;
+ height:125px;
+ transform-origin:50% 0;
+ background:linear-gradient(#d6b66a33,transparent 14%)
+}
+
+.dir{
+ position:absolute;
+ color:#81978f;
+ font:10px Georgia;
+ letter-spacing:1px;
+ z-index:2
+}
+
+.dir.mid{
+ font-size:8px;
+ color:#5f7871
+}
+
+.n{
+ top:14px;
+ left:50%;
+ transform:translateX(-50%);
+ color:#f0d994
+}
+
+.s{
+ bottom:14px;
+ left:50%;
+ transform:translateX(-50%)
+}
+
+.e{
+ right:16px;
+ top:50%;
+ transform:translateY(-50%)
+}
+
+.w{
+ left:16px;
+ top:50%;
+ transform:translateY(-50%)
+}
+
+.ne{top:38px;right:38px}
+.se{bottom:38px;right:38px}
+.sw{bottom:38px;left:38px}
+.nw{top:38px;left:38px}
+
+.needle{
+ position:absolute;
+ left:50%;
+ top:50%;
+ height:98px;
+ width:3px;
+ background:linear-gradient(transparent 15%,#f0d994 30%);
+ transform-origin:50% 100%;
+ transform:translate(-50%,-100%);
+ border-radius:4px;
+ z-index:3
+}
+
+.tip{
+ position:absolute;
+ top:-4px;
+ left:50%;
+ transform:translateX(-50%);
+ border-left:7px solid transparent;
+ border-right:7px solid transparent;
+ border-bottom:12px solid #f0d994;
+ filter:drop-shadow(0 0 5px #d6b66a77)
+}
+
+.center{
+ position:absolute;
+ left:50%;
+ top:50%;
+ width:17px;
+ height:17px;
+ background:var(--g);
+ border-radius:50%;
+ transform:translate(-50%,-50%);
+ z-index:3;
+ box-shadow:0 0 10px #d6b66a99;
+ animation:centerPulse 2.4s ease-in-out infinite
+}
+
+@keyframes centerPulse{
+ 0%,100%{box-shadow:0 0 8px #d6b66a88}
+ 50%{box-shadow:0 0 20px 4px #d6b66acc}
+}
+
+.deg{
+ font:19px Georgia;
+ color:#f0d994
+}
+
+.status,.cloc{
+ font-size:9px;
+ color:#81978f;
+ margin:5px auto;
+ line-height:1.5
+}
+
+.cbtn{
+ border:1px solid var(--l);
+ background:#d6b66a12;
+ color:#f0d994;
+ border-radius:11px;
+ padding:9px 15px;
+ font-size:9px
+}
+
+/* PRAYER TRACKER */
+
+.trk{
+ display:none;
+ background:var(--c);
+ border:1px solid var(--l);
+ border-radius:18px;
+ padding:16px;
+ margin-top:10px
+}
+
+.trk.show{
+ display:block;
+ animation:secIn .4s ease
+}
+
+.trk-actions{
+ display:flex;
+ gap:8px
+}
+
+.trk-head{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ margin-bottom:12px
+}
+
+.trk-head h3{
+ margin:0;
+ font:14px Georgia;
+ color:#f0d994
+}
+
+.trk-head p{
+ margin:3px 0 0;
+ font-size:9px;
+ color:#81978f
+}
+
+.trk-edit{
+ width:32px;
+ height:32px;
+ flex-shrink:0;
+ border:1px solid var(--l);
+ background:#0d2921;
+ border-radius:10px;
+ color:var(--g);
+ font-size:13px
+}
+
+.trk-row{
+ display:flex;
+ align-items:center;
+ gap:11px;
+ padding:10px 4px;
+ border-top:1px solid #d6b66a14;
+ width:100%;
+ background:none;
+ border-left:0;
+ border-right:0;
+ border-bottom:0;
+ color:inherit;
+ text-align:left
+}
+
+.trk-row:first-of-type{
+ border-top:0
+}
+
+.trk-icon{
+ width:34px;
+ height:34px;
+ border:1px solid var(--l);
+ border-radius:10px;
+ display:grid;
+ place-items:center;
+ font-size:16px;
+ flex-shrink:0;
+ background:#0b211b
+}
+
+.trk-icon.yes{
+ background:#2c5c3f22;
+ border-color:#7fdca44a
+}
+
+.trk-icon.no{
+ background:#5c2c2c22;
+ border-color:#e08b8b4a
+}
+
+.trk-info{
+ flex:1
+}
+
+.trk-name{
+ font:13px Georgia;
+ color:#eee
+}
+
+.trk-ar{
+ font-family:'Scheherazade New','Amiri';
+ font-size:9px;
+ color:#81978f;
+ direction:rtl;
+ margin-top:2px
+}
+
+.trk-mark{
+ font-size:14px;
+ width:20px;
+ text-align:center;
+ flex-shrink:0
+}
+
+.trk-mark.yes{color:#7fdca4}
+.trk-mark.no{color:#e08b8b}
+.trk-mark.pending{color:#5f7871;font-size:10px}
+
+/* PRAYER YES/NO MODAL */
+
+.pmodal{
+ position:fixed;
+ inset:0;
+ z-index:130;
+ background:#020806cc;
+ display:none;
+ align-items:flex-end;
+ justify-content:center
+}
+
+.pmodal.show{
+ display:flex
+}
+
+.pmsheet{
+ width:100%;
+ max-width:430px;
+ background:var(--c);
+ border:1px solid var(--l);
+ border-radius:22px 22px 0 0;
+ padding:22px 20px 26px;
+ text-align:center;
+ animation:secIn .35s ease
+}
+
+.pmsheet h3{
+ margin:0 0 3px;
+ font:16px Georgia;
+ color:#f0d994
+}
+
+.pmsheet .par{
+ font-size:16px;
+ display:block;
+ margin-bottom:2px
+}
+
+.pmsheet p{
+ margin:0 0 18px;
+ font-size:10px;
+ color:#81978f
+}
+
+.pmbtns{
+ display:flex;
+ gap:10px
+}
+
+.pmbtn{
+ flex:1;
+ padding:13px;
+ border-radius:14px;
+ border:1px solid var(--l);
+ font-size:12px;
+ font-family:Georgia,serif
+}
+
+.pmbtn.yes{
+ background:#2c5c3f33;
+ color:#a6f0c2
+}
+
+.pmbtn.no{
+ background:#5c2c2c33;
+ color:#f0b0b0
+}
+
+.pmclose{
+ margin-top:14px;
+ border:0;
+ background:none;
+ color:#71877f;
+ font-size:9px
+}
+
+/* EMOJI PICKER */
+
+.epick-label{
+ font-size:9px;
+ letter-spacing:1px;
+ color:#81978f;
+ text-align:left;
+ margin:14px 0 8px
+}
+
+.epick-grid{
+ display:grid;
+ grid-template-columns:repeat(6,1fr);
+ gap:7px
+}
+
+.epick-opt{
+ width:100%;
+ aspect-ratio:1;
+ border:1px solid var(--l);
+ background:#0d2921;
+ border-radius:11px;
+ font-size:19px;
+ display:grid;
+ place-items:center
+}
+
+.epick-opt.sel{
+ border-color:var(--g);
+ background:#d6b66a22;
+ box-shadow:0 0 0 2px #d6b66a44 inset
+}
+
+/* CELEBRATION */
+
+.celeb{
+ position:fixed;
+ inset:0;
+ z-index:150;
+ display:none;
+ align-items:center;
+ justify-content:center;
+ background:#020806e6
+}
+
+.celeb.show{
+ display:flex
+}
+
+.celeb-burst{
+ position:absolute;
+ width:10px;
+ height:10px
+}
+
+.celeb-burst span{
+ position:absolute;
+ left:0;
+ top:0;
+ width:6px;
+ height:6px;
+ border-radius:50%;
+ background:var(--g);
+ box-shadow:0 0 10px 2px #d6b66a99;
+ animation:burstOut 1.4s ease-out infinite
+}
+
+.celeb-burst span:nth-child(1){--r:0deg;animation-delay:0s}
+.celeb-burst span:nth-child(2){--r:45deg;animation-delay:.08s}
+.celeb-burst span:nth-child(3){--r:90deg;animation-delay:.16s}
+.celeb-burst span:nth-child(4){--r:135deg;animation-delay:.24s}
+.celeb-burst span:nth-child(5){--r:180deg;animation-delay:.32s}
+.celeb-burst span:nth-child(6){--r:225deg;animation-delay:.4s}
+.celeb-burst span:nth-child(7){--r:270deg;animation-delay:.48s}
+.celeb-burst span:nth-child(8){--r:315deg;animation-delay:.56s}
+
+@keyframes burstOut{
+ 0%{transform:rotate(var(--r,0deg)) translateY(0) scale(1);opacity:1}
+ 100%{transform:rotate(var(--r,0deg)) translateY(-130px) scale(.2);opacity:0}
+}
+
+.celeb-card{
+ position:relative;
+ z-index:2;
+ text-align:center;
+ padding:44px 34px;
+ max-width:320px;
+ width:88%;
+ border:1px solid var(--g);
+ border-radius:26px;
+ background:linear-gradient(160deg,#102d25,#0a211a);
+ box-shadow:0 0 60px #d6b66a44;
+ animation:secIn .5s ease
+}
+
+.celeb-card .celeb-ar{
+ font-family:'Scheherazade New','Amiri';
+ font-size:26px;
+ color:#e6d59e;
+ margin-bottom:6px
+}
+
+.celeb-card h3{
+ margin:0 0 14px;
+ font:34px Georgia;
+ letter-spacing:2px;
+ color:#f0d994;
+ text-shadow:0 0 22px #d6b66a99
+}
+
+.celeb-card p{
+ margin:0 0 8px;
+ font-size:13px;
+ line-height:1.6;
+ color:#c8d6cf
+}
+
+.celeb-card p:last-child{
+ margin-bottom:0;
+ color:#9db2aa;
+ font-size:11.5px
+}
+
+/* TOAST */
+
+.toast{
+ position:fixed;
+ z-index:120;
+ left:50%;
+ bottom:91px;
+ transform:translate(-50%,20px);
+ background:#102a22;
+ border:1px solid var(--l);
+ color:#f0d994;
+ padding:9px 14px;
+ border-radius:12px;
+ font-size:9px;
+ opacity:0;
+ pointer-events:none;
+ transition:.3s
+}
+
+.toast.show{
+ opacity:1;
+ transform:translate(-50%,0)
+}
+
+@media(max-width:370px){
+ .rtime{font-size:21px}
+ .hdate{font-size:21px}
+ .circle,.comp{width:235px;height:235px}
+  .kaabaMark{transform:translate(-50%,-50%) scale(.9)}
+ .day{min-height:48px}
+ .day .hmn{font-size:5px}
+}
+
+/* CALENDAR: HIJRI/ARABIC DATE FIRST */
+.cal-greg{font-size:9px;color:#81978f;letter-spacing:.4px}
+.cal-greg-bn{display:none}
+.cal-hijri-main{font-family:'Scheherazade New','Amiri';font-size:16px;line-height:1.15;color:#f0d994;direction:rtl}
+.cal-hijri-year{font:8px Georgia;color:#b9a96f;margin-top:2px}
+.cal-greg-small{font:7px Georgia;color:#71877f;margin-top:3px;direction:ltr}
+.day .gd{font-size:7px;color:#71877f;margin-top:2px}
+.day .hd{font-family:'Scheherazade New','Amiri';font-size:17px;line-height:1.05;color:#f0d994;direction:rtl}
+.day .hmn{font-family:'Scheherazade New','Amiri';font-size:7px;color:#c9b877;line-height:1.2}
+.selectedDate .sd-g{font-size:8px;color:#81978f;margin-top:3px}
+.selectedDate .sd-h{font-family:'Scheherazade New','Amiri';font-size:22px;color:#f0d994;direction:rtl}
+.selectedDate .sd-bn{font-size:8px;color:#aebdb7}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOADING -->
+
+<div id="load">
+
+ <div class="la">
+  <div class="ar" id="lar"></div>
+  <div class="tr" id="ltr"></div>
+ </div>
+
+ <div class="logo"></div>
+
+ <div class="lt">MUSLIM</div>
+ <div class="ls">Your daily Islamic companion</div>
+
+ <div class="spin"></div>
+
+</div>
+
+
+<div id="app">
+
+<!-- TOP -->
+
+<div class="top">
+ <div class="brand">
+
+  <div class="bm"></div>
+
+  <div>
+   <div class="bn">MUSLIM</div>
+   <div class="loc" id="loc" onclick="requestLocation()" style="cursor:pointer;display:flex;align-items:center;gap:6px">
+    <span id="locText" style="text-decoration:underline dotted;text-underline-offset:2px">Turn on your location</span>
+    <span id="locSpin" class="locspin" style="display:none"></span>
+   </div>
+  </div>
+
+ </div>
+
+ <div class="moreWrap">
+  <button class="moreBtn" onclick="toggleMoreMenu(event)" aria-label="More">⋮</button>
+  <div class="moreMenu" id="moreMenu">
+   <button onclick="openMoreTool('calendar')">Hijri Calendar &amp; Moon<small>Daily moon phases &amp; eclipses</small></button>
+   <button onclick="openMoreTool('qibla')">Qibla Compass<small>Find the direction of the Kaaba</small></button>
+   <button onclick="openMoreTool('tracker')">Today's Prayer<small>Track your daily Salah</small></button>
+   <button onclick="openMoreTool('more')">More Islamic Tools<small>Open the full More section</small></button>
+  </div>
+ </div>
+</div>
+
+
+<!-- HOME -->
+
+<section id="home" class="sec on">
+
+ <div class="bism">
+
+  <div class="ar">
+   بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+  </div>
+
+  <div class="ayahRow">
+
+   <button class="ayNav" onclick="navAyah(-1)" aria-label="Previous ayah">‹</button>
+
+   <div class="ayah" id="hbox">
+
+    <div class="ayTop">
+     <span class="ayLabel">DAILY REMINDER</span>
+     <button class="ayCopy" id="ayCopyBtn" onclick="copyHomeAyah()" aria-label="Copy Ayah">⧉</button>
+    </div>
+
+    <div class="ar" id="har"></div>
+    <div class="tr" id="htr"></div>
+
+    <div class="ayDots" id="ayDots"></div>
+
+   </div>
+
+   <button class="ayNav" onclick="navAyah(1)" aria-label="Next ayah">›</button>
+
+  </div>
+
+ </div>
+
+
+ <div class="info">
+
+  <!-- REMAINING TIME -->
+
+  <div class="card remain">
+
+   <div class="small">
+    Remaining Time
+   </div>
+
+   <div class="rname" id="rn">
+    Fajr
+   </div>
+
+   <div class="rtime" id="rt">
+    00:00:00
+   </div>
+
+   <div class="until" id="ru">
+    until Fajr
+   </div>
+
+   <div class="clock" id="clock">
+    <small>LOCAL TIME</small>
+    00:00:00 PM
+   </div>
+
+   <div class="cycle" id="ci">
+    1 / 5
+   </div>
+
+  </div>
+
+
+  <!-- HIJRI TODAY -->
+
+  <div class="card hijri">
+
+   <div class="hlabel">
+    التاريخ الهجري
+   </div>
+
+   <div class="hday" id="hd"></div>
+
+   <div class="hdate" id="hdt"></div>
+
+   <div class="hmonth" id="hm"></div>
+
+   <div class="hbn" id="hmbn"></div>
+
+   <div class="hyear" id="hy"></div>
+
+   <div class="hybn" id="hybn"></div>
+
+   <div class="hmk">
+    MAKKAH TIME
+    <b id="mktime">--:--:--</b>
+   </div>
+
+   <div class="hmk" id="hmoonWrap" style="display:flex;align-items:center;justify-content:center;gap:7px;border-top:none;padding-top:0">
+    <div id="hmoonIcon"></div>
+    <span id="hmoonTxt" style="font-size:8px;color:#c9d6cf;letter-spacing:0"></span>
+   </div>
+
+  </div>
+
+ </div>
+
+
+ <!-- PRAYERS -->
+
+ <div class="head">
+  <h2>Prayer Times</h2>
+  <span>Today</span>
+ </div>
+
+ <div class="grid" id="prayers"></div>
+
+</section>
+
+
+<!-- QURAN -->
+
+<section id="quran" class="sec">
+
+ <div class="pg">
+
+  <button class="back" onclick="backSection()">‹</button>
+
+  <h1>QURAN</h1>
+  <p>Read the Holy Quran</p>
+
+ </div>
+
+ <div class="slist" id="sl"></div>
+
+</section>
+
+
+<!-- DUA -->
+
+<section id="dua" class="sec">
+
+ <div class="pg">
+
+  <button class="back" onclick="backSection()">‹</button>
+
+  <h1>DUA</h1>
+  <p>Daily supplications</p>
+
+ </div>
+
+
+ <div class="duas">
+
+  <div class="dua">
+   <div class="di">▤</div>
+   <h3>Ayatul Kursi</h3>
+   <div class="ar">
+    اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ
+   </div>
+   <p>
+    আল্লাহ—তিনি ছাড়া কোনো উপাস্য নেই।
+    তিনি চিরঞ্জীব, সমস্ত সৃষ্টির ধারক ও সংরক্ষক।
+   </p>
+  </div>
+
+
+  <div class="dua">
+   <div class="di">▤</div>
+   <h3>Daily Dhikr</h3>
+   <div class="ar">
+    حَسْبِيَ اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ
+   </div>
+   <p>
+    আমার জন্য আল্লাহই যথেষ্ট।
+    তিনি ছাড়া কোনো উপাস্য নেই।
+   </p>
+  </div>
+
+
+  <div class="dua">
+   <div class="di">▤</div>
+   <h3>Protection</h3>
+   <div class="ar">
+    أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ
+   </div>
+   <p>
+    আল্লাহর পরিপূর্ণ বাণীর মাধ্যমে
+    আমি তাঁর সৃষ্টির অনিষ্ট থেকে আশ্রয় চাই।
+   </p>
+  </div>
+
+
+  <div class="dua">
+   <div class="di">▤</div>
+   <h3>Forgiveness</h3>
+   <div class="ar">
+    رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ
+   </div>
+   <p>
+    হে আমার রব, আমাকে ক্ষমা করুন এবং
+    আমার তওবা কবুল করুন। নিশ্চয়ই আপনি তওবা কবুলকারী, পরম দয়ালু।
+   </p>
+  </div>
+
+
+  <div class="dua">
+   <div class="di">▤</div>
+   <h3>For Knowledge</h3>
+   <div class="ar">
+    رَبِّ زِدْنِي عِلْمًا
+   </div>
+   <p>
+    হে আমার রব, আমার জ্ঞান বৃদ্ধি করে দিন।
+   </p>
+  </div>
+
+
+  <div class="dua">
+   <div class="di">▤</div>
+   <h3>For Parents</h3>
+   <div class="ar">
+    رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا
+   </div>
+   <p>
+    হে আমার রব, তাঁদের প্রতি দয়া করুন,
+    যেমন তাঁরা আমাকে ছোটবেলায় লালন-পালন করেছেন।
+   </p>
+  </div>
+
+
+  <div class="dua">
+   <div class="di">▤</div>
+   <h3>Rabbana Atina</h3>
+   <div class="ar">
+    رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ
+   </div>
+   <p>
+    হে আমাদের রব, আমাদের দুনিয়াতে কল্যাণ দিন,
+    আখিরাতেও কল্যাণ দিন এবং আগুনের শাস্তি থেকে রক্ষা করুন।
+   </p>
+  </div>
+
+
+  <div class="dua">
+   <div class="di">▤</div>
+   <h3>Distress &amp; Difficulty</h3>
+   <div class="ar">
+    لَا إِلَٰهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ
+   </div>
+   <p>
+    আপনি ছাড়া কোনো উপাস্য নেই; আপনি পবিত্র।
+    নিশ্চয়ই আমি জালিমদের অন্তর্ভুক্ত ছিলাম।
+   </p>
+  </div>
+
+
+  <div class="dua">
+   <div class="di">▤</div>
+   <h3>Sayyidul Istighfar</h3>
+   <div class="ar">
+    اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَٰهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَىٰ عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+   </div>
+   <p>
+    হে আল্লাহ, আপনি আমার রব; আপনি ছাড়া কোনো উপাস্য নেই।
+    আপনি আমাকে সৃষ্টি করেছেন এবং আমি আপনার বান্দা।
+    আমি আমার গুনাহ স্বীকার করছি; তাই আমাকে ক্ষমা করুন।
+   </p>
+  </div>
+
+
+  <div class="dua">
+   <div class="di">▤</div>
+   <h3>For Forgiveness</h3>
+   <div class="ar">
+    رَبَّنَا ظَلَمْنَا أَنْفُسَنَا وَإِنْ لَمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ
+   </div>
+   <p>
+    হে আমাদের রব, আমরা নিজেদের প্রতি জুলুম করেছি।
+    আপনি যদি আমাদের ক্ষমা না করেন ও দয়া না করেন,
+    তবে আমরা অবশ্যই ক্ষতিগ্রস্তদের অন্তর্ভুক্ত হব।
+   </p>
+  </div>
+
+
+  <div class="dua">
+   <div class="di">▤</div>
+   <h3>Peace of Heart</h3>
+   <div class="ar">
+    اللَّهُمَّ إِنِّي أَسْأَلُكَ قَلْبًا مُطْمَئِنًّا
+   </div>
+   <p>
+    হে আল্লাহ, আমি আপনার কাছে প্রশান্ত হৃদয় প্রার্থনা করছি।
+   </p>
+  </div>
+
+
+  <div class="dua">
+   <div class="di">▤</div>
+   <h3>Before Eating</h3>
+   <div class="ar">
+    بِسْمِ اللَّهِ
+   </div>
+   <p>
+    আল্লাহর নামে শুরু করছি।
+   </p>
+  </div>
+
+
+  <div class="dua">
+   <div class="di">▤</div>
+   <h3>After Eating</h3>
+   <div class="ar">
+    الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا
+   </div>
+   <p>
+    সমস্ত প্রশংসা আল্লাহর, যিনি আমাকে এই খাবার খাওয়ালেন।
+   </p>
+  </div>
+
+
+  <div class="dua">
+   <div class="di">▤</div>
+   <h3>Trust in Allah</h3>
+   <div class="ar">
+    حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ
+   </div>
+   <p>
+    আমাদের জন্য আল্লাহই যথেষ্ট এবং তিনিই উত্তম কর্মবিধায়ক।
+   </p>
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- RELAXING DUA AUDIO -->
+<section id="audio" class="sec">
+ <div class="pg">
+  <button class="back" onclick="backSection()">‹</button>
+  <h1>RELAXING DUA</h1>
+  <p>Peaceful recitations for your heart</p>
+ </div>
+ <div class="audioHint">Listen to a Dua, relax, and remember Allah.</div>
+ <div class="audioList" id="audioList"></div>
+</section>
+
+
+<!-- TASBIH -->
+
+<section id="tasbih" class="sec">
+
+ <div class="pg">
+
+  <button class="back" onclick="backSection()">‹</button>
+
+  <h1>TASBIH</h1>
+  <p>Choose a Tasbih and tap the circle</p>
+
+ </div>
+
+
+ <div class="tmenu" id="tmenu">
+
+  <button class="tselect" onclick="toggleTMenu()">
+
+   <span class="selpreview">
+    <span class="ar" id="tpa"></span>
+    <span class="en" id="tpe"></span>
+   </span>
+
+   <span class="arrow">⌄</span>
+
+  </button>
+
+  <div class="opts" id="opts"></div>
+
+ </div>
+
+
+ <div class="tw">
+
+  <div class="circle" id="tcircle" onclick="inc()">
+
+   <div class="inner" id="tinner">
+
+    <div class="count" id="tc">0</div>
+
+    <div class="selar" id="ta"></div>
+
+    <div class="selen" id="te"></div>
+
+   </div>
+
+  </div>
+
+  <button class="reset" onclick="resetT()">
+   Reset Count
+  </button>
+
+ </div>
+
+</section>
+
+
+<!-- MORE -->
+
+<section id="more" class="sec">
+
+ <div class="pg">
+
+  <button class="back" onclick="backSection()">‹</button>
+
+  <h1>MORE</h1>
+  <p>Islamic tools</p>
+
+ </div>
+
+
+ <div class="util" onclick="toggleUtil('cp')">
+
+  <div class="ui">
+   ◈
+  </div>
+
+  <div class="ut">
+   <h3>Qibla Compass</h3>
+   <p>Find the direction of the Kaaba</p>
+  </div>
+
+ </div>
+
+
+ <div class="cp" id="cp">
+
+  <div class="comp" id="comp">
+
+   <div class="sweep"></div>
+
+   <div class="dial" id="dial">
+
+    <div class="ticks"></div>
+
+    <div class="kaabaMark" aria-label="Kaaba"></div>
+
+    <div class="dir n">N</div>
+    <div class="dir e">E</div>
+    <div class="dir s">S</div>
+    <div class="dir w">W</div>
+
+    <div class="dir mid ne">NE</div>
+    <div class="dir mid se">SE</div>
+    <div class="dir mid sw">SW</div>
+    <div class="dir mid nw">NW</div>
+
+    <div class="needle" id="needle">
+     <i class="tip"></i>
+    </div>
+
+   </div>
+
+   <div class="center"></div>
+
+  </div>
+
+  <div class="deg" id="deg">
+   Qibla — --°
+  </div>
+
+  <div class="cloc" id="cloc">
+   Calculating...
+  </div>
+
+  <div class="status" id="cstatus">
+   Enable compass to detect direction.
+  </div>
+
+  <button class="cbtn" onclick="startCompass()">
+   Enable Compass
+  </button>
+
+ </div>
+
+
+ <!-- HIJRI CALENDAR & MOON -->
+
+ <div class="util" onclick="toggleUtil('calWrap')">
+
+  <div class="ui">
+   ☾
+  </div>
+
+  <div class="ut">
+   <h3>Hijri Calendar &amp; Moon</h3>
+   <p>Full calendar with daily moon phases</p>
+  </div>
+
+ </div>
+
+
+ <div class="cp" id="calWrap">
+
+  <div class="calendar" id="calendar"></div>
+
+ </div>
+
+
+ <!-- TODAY'S PRAYER -->
+
+ <div class="util" onclick="toggleUtil('trk')">
+
+  <div class="ui">
+   ✓
+  </div>
+
+  <div class="ut">
+   <h3>Today's Prayer</h3>
+   <p>Track whether you prayed each waqt</p>
+  </div>
+
+ </div>
+
+
+ <div class="trk" id="trk">
+
+  <div class="trk-head">
+   <div>
+    <h3>Today's Prayer</h3>
+    <p>Tap a waqt to mark it</p>
+   </div>
+
+   <div class="trk-actions">
+    <button class="trk-edit" onclick="refreshTrack()" aria-label="Refresh">
+     ⟳
+    </button>
+    <button class="trk-edit" onclick="openEmojiPicker()" aria-label="Customize icons">
+     ✎
+    </button>
+   </div>
+  </div>
+
+  <div id="trkList"></div>
+
+ </div>
+
+</section>
+
+
+<!-- PRAYER YES/NO SHEET -->
+
+<div class="pmodal" id="pmodal" onclick="if(event.target===this)closeTrack()">
+
+ <div class="pmsheet">
+
+  <span class="par" id="pmar"></span>
+  <h3 id="pmname"></h3>
+  <p>Have you prayed this today?</p>
+
+  <div class="pmbtns">
+   <button class="pmbtn yes" onclick="setTrack(true)">
+    <span id="pmYesIcon">🙂</span> Yes
+   </button>
+   <button class="pmbtn no" onclick="setTrack(false)">
+    <span id="pmNoIcon">🙁</span> No
+   </button>
+  </div>
+
+  <button class="pmclose" onclick="closeTrack()">Cancel</button>
+
+ </div>
+
+</div>
+
+
+<!-- EMOJI PICKER -->
+
+<div class="pmodal" id="emojiModal" onclick="if(event.target===this)closeEmojiPicker()">
+
+ <div class="pmsheet">
+
+  <h3>Customize Icons</h3>
+  <p>Choose how prayed / missed will look</p>
+
+  <div class="epick-label">Prayed (Yes)</div>
+  <div class="epick-grid" id="epickHappy"></div>
+
+  <div class="epick-label">Missed (No)</div>
+  <div class="epick-grid" id="epickSad"></div>
+
+  <button class="pmclose" onclick="closeEmojiPicker()" style="margin-top:16px">Done</button>
+
+ </div>
+
+</div>
+
+
+<!-- ALL PRAYERS DONE CELEBRATION -->
+
+<div class="celeb" id="celeb" onclick="closeCeleb()">
+
+ <div class="celeb-burst">
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+ </div>
+
+ <div class="celeb-card">
+  <div class="celeb-ar">ما شاء الله</div>
+  <h3>MashaAllah!</h3>
+  <p>You completed all 5 prayers today.</p>
+  <p>May Allah accept your Salah and keep this beautiful habit going every single day. 🤍</p>
+ </div>
+
+</div>
+
+
+<!-- NAV -->
+
+<nav class="nav">
+
+ <button class="on" onclick="go('home',this)">
+  <svg viewBox="0 0 24 24">
+   <path d="M3 11.5L12 4l9 7.5M5 10v10h14V10M9 20v-6h6v6"/>
+  </svg>
+  Home
+ </button>
+
+
+ <button onclick="go('quran',this)">
+  <svg viewBox="0 0 24 24">
+   <path d="M12 4C9.5 2.5 6.5 2.5 4 4v14c2.5-1.5 5.5-1.5 8 0c2.5-1.5 5.5-1.5 8 0V4c-2.5-1.5-5.5-1.5-8 0z"/>
+   <path d="M12 4v14"/>
+  </svg>
+  Quran
+ </button>
+
+
+ <button onclick="go('dua',this)">
+  <svg viewBox="0 0 24 24">
+   <path d="M6 20c-1.6-3.2-2-6.7-.6-10.2c.7-1.8 2-3 2-3M18 20c1.6-3.2 2-6.7.6-10.2c-.7-1.8-2-3-2-3M9 4.2c.8 1.9.8 3.9 0 5.8M15 4.2c-.8 1.9-.8 3.9 0 5.8"/>
+  </svg>
+  Dua
+ </button>
+
+
+ <button onclick="go('tasbih',this)">
+  <svg viewBox="0 0 24 24">
+   <circle cx="12" cy="12" r="2.5"/>
+   <circle cx="12" cy="3.5" r="2"/>
+   <circle cx="18" cy="6" r="2"/>
+   <circle cx="20.5" cy="12" r="2"/>
+   <circle cx="18" cy="18" r="2"/>
+   <circle cx="12" cy="20.5" r="2"/>
+   <circle cx="6" cy="18" r="2"/>
+   <circle cx="3.5" cy="12" r="2"/>
+   <circle cx="6" cy="6" r="2"/>
+  </svg>
+  Tasbih
+ </button>
+
+
+ <button onclick="go('audio',this)">
+  <svg viewBox="0 0 24 24">
+   <path d="M9 18V6l10-2v12"/>
+   <circle cx="6.5" cy="18" r="3"/>
+   <circle cx="16.5" cy="16" r="3"/>
+  </svg>
+  Audio
+ </button>
+
+</nav>
+
+</div>
+
+
+<!-- QURAN READER -->
+
+<div class="reader" id="reader">
+
+ <div class="rh">
+
+  <button class="close" onclick="closeQ()">‹</button>
+
+  <div class="rt">
+   <h2 id="rtitle"></h2>
+   <span id="rsub"></span>
+  </div>
+
+ </div>
+
+ <div class="rb" id="rb"></div>
+
+</div>
+
+
+<div class="toast" id="toast">
+ Copied
+</div>
+
+
+<script>
+
+/* BASIC */
+
+const $=id=>document.getElementById(id);
+
+
+/* HOME AYAH */
+
+const A=[
+[
+ "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+ "নিশ্চয়ই কষ্টের সাথে স্বস্তি রয়েছে।"
+],
+[
+ "إِنَّ اللَّهَ مَعَ الصَّابِرِينَ",
+ "নিশ্চয়ই আল্লাহ ধৈর্যশীলদের সাথে আছেন।"
+],
+[
+ "وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ",
+ "যে আল্লাহর ওপর ভরসা করে, তিনিই তার জন্য যথেষ্ট।"
+],
+[
+ "وَاذْكُر رَّبَّكَ إِذَا نَسِيتَ",
+ "আর যখন ভুলে যাও, তখন তোমার রবকে স্মরণ করো।"
+],
+[
+ "إِنَّ اللَّهَ لَا يُضِيعُ أَجْرَ الْمُحْسِنِينَ",
+ "নিশ্চয়ই আল্লাহ সৎকর্মশীলদের প্রতিদান নষ্ট করেন না।"
+],
+[
+ "إِنَّ اللَّهَ غَفُورٌ رَّحِيمٌ",
+ "নিশ্চয়ই আল্লাহ পরম ক্ষমাশীল, পরম দয়ালু।"
+],
+[
+ "وَاللَّهُ خَيْرٌ حَافِظًا",
+ "আল্লাহই সর্বোত্তম রক্ষাকারী।"
+],
+[
+ "وَقُل رَّبِّ زِدْنِي عِلْمًا",
+ "আর বলো, হে আমার রব, আমার জ্ঞান বাড়িয়ে দিন।"
+],
+[
+ "إِنَّ رَبِّي قَرِيبٌ مُّجِيبٌ",
+ "নিশ্চয়ই আমার রব নিকটবর্তী, দোয়া কবুলকারী।"
+],
+[
+ "فَاذْكُرُونِي أَذْكُرْكُمْ",
+ "তোমরা আমাকে স্মরণ করো, আমিও তোমাদের স্মরণ করব।"
+],
+[
+ "وَاللَّهُ مَعَكُمْ",
+ "আর আল্লাহ তোমাদের সাথে আছেন।"
+],
+[
+ "إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ",
+ "নিশ্চয়ই আল্লাহ তওবাকারীদের ভালোবাসেন।"
+],
+[
+ "لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ",
+ "আল্লাহর রহমত থেকে নিরাশ হয়ো না।"
+],
+[
+ "وَبَشِّرِ الصَّابِرِينَ",
+ "ধৈর্যশীলদের সুসংবাদ দাও।"
+],
+[
+ "وَاسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ",
+ "ধৈর্য ও সালাতের মাধ্যমে সাহায্য চাও।"
+],
+[
+ "إِنَّ اللَّهَ يُحِبُّ الْمُحْسِنِينَ",
+ "নিশ্চয়ই আল্লাহ সৎকর্মশীলদের ভালোবাসেন।"
+],
+[
+ "إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ",
+ "নিশ্চয়ই আমার রব আমার সাথে আছেন; তিনি আমাকে পথ দেখাবেন।"
+],
+[
+ "وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ",
+ "আমার সাফল্য কেবল আল্লাহর পক্ষ থেকেই।"
+],
+[
+ "وَإِلَى اللَّهِ تُرْجَعُ الْأُمُورُ",
+ "সব বিষয়ই আল্লাহর কাছেই প্রত্যাবর্তিত হয়।"
+],
+[
+ "رَبِّ اشْرَحْ لِي صَدْرِي",
+ "হে আমার রব, আমার বক্ষ প্রশস্ত করে দিন।"
+],
+[
+ "إِنَّ اللَّهَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+ "নিশ্চয়ই আল্লাহ সবকিছুর ওপর ক্ষমতাবান।"
+]
+];
+
+let ai=0;
+let ayahTimer=null;
+
+function buildAyDots(){
+
+ $("ayDots").innerHTML=A.map((_,i)=>
+  `<span class="${i==ai?"on":""}"></span>`
+ ).join("");
+
+}
+
+function showAyah(idx){
+
+ ai=((idx%A.length)+A.length)%A.length;
+
+ let a=A[ai];
+
+ $("hbox").classList.remove("fadeAyah");
+ void $("hbox").offsetWidth;
+ $("hbox").classList.add("fadeAyah");
+
+ $("har").textContent=a[0];
+ $("htr").textContent=a[1];
+
+ $("lar").classList.remove("fadeAyah");
+ void $("lar").offsetWidth;
+ $("lar").classList.add("fadeAyah");
+
+ $("lar").textContent=a[0];
+ $("ltr").textContent=a[1];
+
+ buildAyDots();
+
+}
+
+function startAyahTimer(){
+
+ if(ayahTimer)clearInterval(ayahTimer);
+
+ ayahTimer=setInterval(
+  ()=>showAyah(ai+1),
+  10000
+ );
+
+}
+
+function navAyah(dir){
+ showAyah(ai+dir);
+ startAyahTimer();
+}
+
+function copyHomeAyah(){
+
+ let a=A[ai];
+
+ copyAyah(
+  $("ayCopyBtn"),
+  a[0]+"\n"+a[1]
+ );
+
+}
+
+showAyah(0);
+startAyahTimer();
+
+setTimeout(
+ ()=>$("load").classList.add("hide"),
+ 3500
+);
+
+
+/* RELAXING DUA AUDIO */
+const relaxingDuas=[
+ {name:"Who is for Jannah",reciter:"Yaseer Al Dosari",ayah:"Surah Yunus v:25",file:"audio/dua1.mp3"},
+ {name:"Establish Salah",reciter:"Yaseer Al Dosari",ayah:"Surah Luqman",file:"audio/dua2.mp3"},
+ {name:"Dua for Forgiveness",reciter:"Your Reciter",ayah:"Ayah 23",file:"audio/dua3.mp3"},
+ {name:"Dua for relax",reciter:"Your Reciter",ayah:"Ayah 29",file:"audio/dua5.mp3"},
+ {name:"Dua for Protection",reciter:"Your Reciter",ayah:"Ayah 255",file:"audio/4.mp3"}
+];
+let activeAudio=null;
+function formatAudioTime(sec){if(!Number.isFinite(sec))return "0:00";const m=Math.floor(sec/60),s=Math.floor(sec%60);return m+":"+String(s).padStart(2,"0")}
+function renderAudio(){
+ const box=$("audioList");if(!box)return;
+ box.innerHTML=relaxingDuas.map((d,i)=>`<div class="audioCard"><div class="audioTop"><div class="audioIcon">♪</div><div class="audioInfo"><div class="audioName">${d.name}</div><div class="audioMeta">Reciter: ${d.reciter}</div><div class="audioAyah">${d.ayah}</div></div><button class="audioPlay" id="ap${i}" onclick="toggleAudio(${i})">▶</button></div><audio id="aud${i}" preload="metadata" src="${d.file}"></audio><input class="audioProgress" id="prog${i}" type="range" min="0" max="100" value="0" step="0.1" oninput="seekAudio(${i},this.value)"><div class="audioTimes"><span id="cur${i}">0:00</span><span id="dur${i}">0:00</span></div></div>`).join("");
+ relaxingDuas.forEach((_,i)=>{const a=$("aud"+i);a.addEventListener("loadedmetadata",()=>$("dur"+i).textContent=formatAudioTime(a.duration));a.addEventListener("timeupdate",()=>{const p=$("prog"+i);if(a.duration)p.value=a.currentTime/a.duration*100;$("cur"+i).textContent=formatAudioTime(a.currentTime)});a.addEventListener("ended",()=>{$("ap"+i).textContent="▶";if(activeAudio===a)activeAudio=null})});
+}
+function toggleAudio(i){const a=$("aud"+i),btn=$("ap"+i);if(!a)return;if(activeAudio&&activeAudio!==a){activeAudio.pause();document.querySelectorAll(".audioPlay").forEach(x=>x.textContent="▶")}if(a.paused){a.play().then(()=>{btn.textContent="❚❚";activeAudio=a}).catch(()=>toast("Add the MP3 file to the audio folder"))}else{a.pause();btn.textContent="▶";activeAudio=null}}
+function seekAudio(i,v){const a=$("aud"+i);if(a&&a.duration)a.currentTime=Number(v)/100*a.duration}
+renderAudio();
+
+function toggleMoreMenu(e){if(e)e.stopPropagation();$("moreMenu").classList.toggle("show")}
+function closeMoreMenu(){$("moreMenu").classList.remove("show")}
+function openMoreTool(which){closeMoreMenu();go("more",null);setTimeout(()=>{if(which==="qibla")toggleUtil("cp");if(which==="tracker")toggleUtil("trk");if(which==="calendar")toggleUtil("calWrap")},80)}
+document.addEventListener("click",e=>{const w=document.querySelector(".moreWrap");if(w&&!w.contains(e.target))closeMoreMenu()});
+
+/* NAVIGATION */
+
+let current="home";
+
+function go(x,b){
+
+ closeMoreMenu();
+ $("reader").classList.remove("show");
+
+ document.querySelectorAll(".sec")
+ .forEach(e=>e.classList.remove("on"));
+
+ $(x).classList.add("on");
+
+ document.querySelectorAll(".nav button")
+ .forEach(e=>e.classList.remove("on"));
+
+ if(b) b.classList.add("on");
+
+ current=x;
+
+ history.pushState(
+  {section:x},
+  "",
+  "#"+x
+ );
+
+ scrollTo(0,0);
+}
+
+
+function backSection(){
+
+ if(current!="home"){
+
+  document.querySelector(".nav button").click();
+
+ }else{
+
+  history.back();
+
+ }
+
+}
+
+
+window.addEventListener("popstate",()=>{
+
+ $("reader").classList.remove("show");
+
+ document.querySelectorAll(".sec")
+ .forEach(e=>e.classList.remove("on"));
+
+ $("home").classList.add("on");
+
+ document.querySelectorAll(".nav button")
+ .forEach(e=>e.classList.remove("on"));
+
+ document.querySelector(".nav button")
+ .classList.add("on");
+
+ current="home";
+
+});
+
+
+/* PRAYER */
+
+/* names stay fixed; hour/minute (index 2,3) are filled in by calcPrayerTimes() */
+const P=[
+ ["Fajr","الفجر",4,30],
+ ["Dhuhr / Jumma","الظهر / الجمعة",12,10],
+ ["Asr","العصر",16,20],
+ ["Maghrib","المغرب",18,15],
+ ["Isha","العشاء",19,35]
+];
+
+/* Makkah (Umm al-Qura) reference prayer times */
+const MK=[
+ [5,18],
+ [12,22],
+ [15,42],
+ [18,6],
+ [19,36]
+];
+
+/* ---- Location + astronomical prayer-time calculation ---- */
+
+const GAZ_LAT=24.0023, GAZ_LON=90.4264;
+const MK_LAT=21.4225, MK_LON=39.8262;
+
+let curLat=GAZ_LAT, curLon=GAZ_LON;
+
+function ptDTR(d){return d*Math.PI/180}
+function ptRTD(r){return r*180/Math.PI}
+function ptSin(d){return Math.sin(ptDTR(d))}
+function ptCos(d){return Math.cos(ptDTR(d))}
+function ptTan(d){return Math.tan(ptDTR(d))}
+function ptArcsin(x){return ptRTD(Math.asin(x))}
+function ptArccos(x){return ptRTD(Math.acos(x))}
+function ptArccot(x){return ptRTD(Math.atan(1/x))}
+function ptArctan2(y,x){return ptRTD(Math.atan2(y,x))}
+function ptFixHour(a){a=a-24*Math.floor(a/24);return a<0?a+24:a}
+function ptFixAngle(a){a=a-360*Math.floor(a/360);return a<0?a+360:a}
+
+function ptJulian(y,m,d){
+ if(m<=2){y-=1;m+=12}
+ let A=Math.floor(y/100), B=2-A+Math.floor(A/4);
+ return Math.floor(365.25*(y+4716))+Math.floor(30.6001*(m+1))+d+B-1524.5;
+}
+
+function ptSunPosition(jd){
+ let D=jd-2451545.0;
+ let g=ptFixAngle(357.529+0.98560028*D);
+ let q=ptFixAngle(280.459+0.98564736*D);
+ let L=ptFixAngle(q+1.915*ptSin(g)+0.020*ptSin(2*g));
+ let e=23.439-0.00000036*D;
+ let decl=ptArcsin(ptSin(e)*ptSin(L));
+ let RA=ptFixHour(ptArctan2(ptCos(e)*ptSin(L),ptCos(L))/15);
+ let eqt=q/15-RA;
+ return {decl,eqt};
+}
+
+function ptTimeDiff(angle,lat,decl){
+ return (1/15)*ptArccos((-ptSin(angle)-ptSin(lat)*ptSin(decl))/(ptCos(lat)*ptCos(decl)));
+}
+
+function ptAsrDiff(factor,lat,decl){
+ let angle=-ptArccot(factor+ptTan(Math.abs(lat-decl)));
+ return ptTimeDiff(angle,lat,decl);
+}
+
+/* Muslim World League angles (18°/17°), Hanafi Asr factor (2) */
+function ptCoreTimes(date,lat,lon,tz){
+
+ let jd=ptJulian(date.getFullYear(),date.getMonth()+1,date.getDate())-lon/(15*24);
+ let sp=ptSunPosition(jd);
+
+ let dhuhr=ptFixHour(12-sp.eqt);
+ let fajr=dhuhr-ptTimeDiff(18,lat,sp.decl);
+ let maghrib=dhuhr+ptTimeDiff(0.833,lat,sp.decl);
+ let isha=dhuhr+ptTimeDiff(17,lat,sp.decl);
+ let asr=dhuhr+ptAsrDiff(2,lat,sp.decl);
+
+ let offset=tz-lon/15;
+
+ function toHM(t){
+  t=ptFixHour(t+offset);
+  let h=Math.floor(t), m=Math.round((t-h)*60);
+  if(m==60){m=0;h+=1;h=ptFixHour(h);}
+  return [h,m];
+ }
+
+ return {
+  fajr:toHM(fajr),
+  dhuhr:toHM(dhuhr),
+  asr:toHM(asr),
+  maghrib:toHM(maghrib),
+  isha:toHM(isha)
+ };
+}
+
+function calcPrayerTimes(date,lat,lon){
+ /* device's current UTC offset — updates automatically while traveling */
+ let tz=-date.getTimezoneOffset()/60;
+ return ptCoreTimes(date,lat,lon,tz);
+}
+
+function calcMakkahTimes(date){
+ /* Makkah has no DST; always UTC+3 */
+ return ptCoreTimes(date,MK_LAT,MK_LON,3);
+}
+
+function fmt12(h,m){
+ return `${h>12?h-12:(h==0?12:h)}:${String(m).padStart(2,"0")} ${h>=12?"PM":"AM"}`;
+}
+
+function renderPrayers(){
+
+ $("prayers").innerHTML=P.map((x,i)=>
+  `<div class="pc">
+   <div class="pn">${x[0]} <span class="par">${x[1]}</span></div>
+   <div class="pt">
+    ${fmt12(x[2],x[3])}
+   </div>
+   <div class="pmk">
+    Makkah: ${fmt12(MK[i][0],MK[i][1])}
+   </div>
+  </div>`
+ ).join("")+
+ `
+<div class="pc j">
+
+ <div>
+  <div class="pn">Jumu'ah <span class="par">صلاة الجمعة</span></div>
+  <div class="pt">1:30 PM</div>
+ </div>
+
+ <div class="badge">
+  FRIDAY ONLY
+ </div>
+
+</div>
+`;
+
+}
+
+function applyPrayerTimes(date,lat,lon){
+
+ let t=calcPrayerTimes(date,lat,lon);
+
+ P[0][2]=t.fajr[0]; P[0][3]=t.fajr[1];
+ P[1][2]=t.dhuhr[0]; P[1][3]=t.dhuhr[1];
+ P[2][2]=t.asr[0]; P[2][3]=t.asr[1];
+ P[3][2]=t.maghrib[0]; P[3][3]=t.maghrib[1];
+ P[4][2]=t.isha[0]; P[4][3]=t.isha[1];
+
+ let mk=calcMakkahTimes(date);
+
+ MK[0]=mk.fajr; MK[1]=mk.dhuhr; MK[2]=mk.asr; MK[3]=mk.maghrib; MK[4]=mk.isha;
+
+ renderPrayers();
+
+ pushPrayerTimesToNative(date);
+
+}
+
+/* Hand today's prayer times over to the Android app so it can schedule
+   exact alarms/notifications for each one. Safe no-op when running in a
+   plain browser (no AndroidNative bridge present). */
+function pushPrayerTimesToNative(date){
+
+ if(!(window.AndroidNative && typeof AndroidNative.schedulePrayerAlarms==="function")) return;
+
+ function toMillis(hour,minute){
+  let d=new Date(date.getFullYear(),date.getMonth(),date.getDate(),hour,minute,0,0);
+  return d.getTime();
+ }
+
+ let times={
+  "Fajr": toMillis(P[0][2],P[0][3]),
+  "Dhuhr": toMillis(P[1][2],P[1][3]),
+  "Asr": toMillis(P[2][2],P[2][3]),
+  "Maghrib": toMillis(P[3][2],P[3][3]),
+  "Isha": toMillis(P[4][2],P[4][3])
+ };
+
+ try{
+  AndroidNative.schedulePrayerAlarms(JSON.stringify(times));
+ }catch(e){}
+
+}
+
+async function reverseGeocodeName(lat,lon){
+
+ try{
+
+  let r=await fetch(
+   `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`
+  );
+
+  let j=await r.json();
+
+  let city=j.city||j.locality||j.principalSubdivision||"";
+  let country=j.countryName||"";
+
+  if(city && country) return `${city}, ${country}`;
+  if(country) return country;
+
+ }catch(e){}
+
+ return null;
+
+}
+
+function requestLocation(){
+
+ /* while we don't know the real location yet, prayer times fall back to Gazipur */
+ applyPrayerTimes(new Date(),curLat,curLon);
+
+ if(!navigator.geolocation){
+  $("locText").textContent="Turn on your location";
+  return;
+ }
+
+ $("locText").textContent="Getting location...";
+ $("locSpin").style.display="inline-block";
+
+ navigator.geolocation.getCurrentPosition(
+
+  async p=>{
+
+   curLat=p.coords.latitude;
+   curLon=p.coords.longitude;
+
+   applyPrayerTimes(new Date(),curLat,curLon);
+
+   let name=await reverseGeocodeName(curLat,curLon);
+
+   $("locSpin").style.display="none";
+   $("locText").textContent=name||"Current location";
+
+  },
+
+  ()=>{
+   /* permission denied / unavailable: keep asking, keep Gazipur-based times */
+   $("locSpin").style.display="none";
+   $("locText").textContent="Turn on your location";
+  },
+
+  {enableHighAccuracy:false,timeout:8000,maximumAge:600000}
+
+ );
+
+}
+
+requestLocation();
+
+/* keep prayer times correct if the day changes or the device timezone changes (e.g. while traveling) */
+setInterval(()=>{
+ applyPrayerTimes(new Date(),curLat,curLon);
+},60000);
+
+
+let pi=0;
+
+function target(){
+
+ let d=new Date();
+ let p=P[pi];
+
+ let t=new Date();
+ t.setHours(p[2],p[3],0,0);
+
+ if(t<=d)
+  t.setDate(t.getDate()+1);
+
+ return t-d;
+}
+
+
+function countdown(){
+
+ let n=Math.max(
+  0,
+  Math.floor(target()/1000)
+ );
+
+ let h=Math.floor(n/3600);
+ let m=Math.floor(n%3600/60);
+ let s=n%60;
+
+ $("rt").textContent=
+  `${String(h).padStart(2,"0")}:`+
+  `${String(m).padStart(2,"0")}:`+
+  `${String(s).padStart(2,"0")}`;
+}
+
+
+function updateClock(){
+
+ let d=new Date();
+
+ /*
+  Device/browser local timezone is used.
+  Digits remain normal.
+  Only the font is Arabic-style.
+ */
+
+ let t=d.toLocaleTimeString([],{
+  hour:"numeric",
+  minute:"2-digit",
+  second:"2-digit"
+ });
+
+ let ds=d.toLocaleDateString([],{
+  weekday:"short",
+  day:"numeric",
+  month:"short"
+ });
+
+ $("clock").innerHTML=
+  `<small>LOCAL TIME</small>${t}<span class="clockdate">${ds}</span>`;
+}
+
+
+function updateMakkah(){
+
+ let d=new Date();
+
+ let mt;
+
+ try{
+
+  mt=d.toLocaleTimeString([],{
+   hour:"numeric",
+   minute:"2-digit",
+   second:"2-digit",
+   timeZone:"Asia/Riyadh"
+  });
+
+ }catch(e){
+
+  mt="--:--:--";
+
+ }
+
+ $("mktime").textContent=mt;
+
+}
+
+
+function pname(){
+
+ $("rn").classList.remove("prayAnim");
+ $("rt").classList.remove("prayAnim");
+
+ void $("rn").offsetWidth;
+
+ $("rn").classList.add("prayAnim");
+ $("rt").classList.add("prayAnim");
+
+ $("rn").textContent=P[pi][0];
+
+ $("ru").textContent=
+  "until "+P[pi][0];
+
+ $("ci").textContent=
+  (pi+1)+" / 5";
+}
+
+
+pname();
+countdown();
+updateClock();
+updateMakkah();
+
+setInterval(()=>{
+ countdown();
+ updateClock();
+ updateMakkah();
+},1000);
+
+setInterval(()=>{
+ pi=(pi+1)%5;
+ pname();
+ countdown();
+},5000);
+
+
+/* HIJRI */
+
+const HM_AR=[
+ "مُحَرَّم",
+ "صَفَر",
+ "رَبِيعُ الأَوَّل",
+ "رَبِيعُ الثَّانِي",
+ "جُمَادَى الأُولَى",
+ "جُمَادَى الآخِرَة",
+ "رَجَب",
+ "شَعْبَان",
+ "رَمَضَان",
+ "شَوَّال",
+ "ذُو القِعْدَة",
+ "ذُو الحِجَّة"
+];
+
+const HM_BN=[
+ "মহররম",
+ "সফর",
+ "রবিউল আউয়াল",
+ "রবিউস সানি",
+ "জমাদিউল আউয়াল",
+ "জমাদিউস সানি",
+ "রজব",
+ "শাবান",
+ "রমজান",
+ "শাওয়াল",
+ "জিলকদ",
+ "জিলহজ"
+];
+
+const MONTH_BN=[
+ "জানুয়ারি",
+ "ফেব্রুয়ারি",
+ "মার্চ",
+ "এপ্রিল",
+ "মে",
+ "জুন",
+ "জুলাই",
+ "আগস্ট",
+ "সেপ্টেম্বর",
+ "অক্টোবর",
+ "নভেম্বর",
+ "ডিসেম্বর"
+];
+
+const WD=[
+ "রবি",
+ "সোম",
+ "মঙ্গল",
+ "বুধ",
+ "বৃহঃ",
+ "শুক্র",
+ "শনি"
+];
+
+const WD_FULL=[
+ "রবিবার",
+ "সোমবার",
+ "মঙ্গলবার",
+ "বুধবার",
+ "বৃহস্পতিবার",
+ "শুক্রবার",
+ "শনিবার"
+];
+
+
+function hijriParts(date){
+
+ let f;
+
+ try{
+
+  f=new Intl.DateTimeFormat(
+   "en-US-u-ca-islamic-umalqura",
+   {
+    day:"numeric",
+    month:"numeric",
+    year:"numeric"
+   }
+  ).formatToParts(date);
+
+ }catch(e){
+
+  f=new Intl.DateTimeFormat(
+   "en-US-u-ca-islamic",
+   {
+    day:"numeric",
+    month:"numeric",
+    year:"numeric"
+   }
+  ).formatToParts(date);
+
+ }
+
+ let o={};
+
+ f.forEach(x=>{
+  o[x.type]=x.value;
+ });
+
+ return{
+  day:Number(o.day),
+  month:Number(o.month),
+  year:Number(o.year)
+ };
+}
+
+
+function hijri(){
+
+ let d=new Date();
+ let h=hijriParts(d);
+
+ $("hd").textContent=
+  WD_FULL[d.getDay()];
+
+ $("hdt").textContent=
+  h.day;
+
+ $("hm").textContent=
+  HM_AR[h.month-1]||"";
+
+ $("hmbn").textContent=
+  HM_BN[h.month-1]||"";
+
+ $("hy").textContent=
+  h.year+" هـ";
+
+ $("hybn").textContent=
+  "হিজরি "+h.year+" সাল";
+
+ let mi=moonInfo(d);
+
+ $("hmoonIcon").innerHTML=
+  moonDiscHTML(mi.illum,mi.waxing,16,true);
+
+ $("hmoonTxt").textContent=
+  mi.nameBn+" • "+Math.round(mi.illum*100)+"%";
+}
+
+hijri();
+
+
+/* MOON PHASE ENGINE */
+
+const SYNODIC_MONTH=29.530588853;
+const REF_NEW_MOON=Date.UTC(2000,0,6,18,14,0);
+
+const MOON_NAME_EN=[
+ "New Moon","Waxing Crescent","First Quarter","Waxing Gibbous",
+ "Full Moon","Waning Gibbous","Last Quarter","Waning Crescent"
+];
+
+const MOON_NAME_BN=[
+ "অমাবস্যা","বর্ধনশীল অর্ধচন্দ্র","প্রথম পাদ","বর্ধনশীল উত্তল চাঁদ",
+ "পূর্ণিমা","হ্রাসমান উত্তল চাঁদ","শেষ পাদ","হ্রাসমান অর্ধচন্দ্র"
+];
+
+const LUNAR_ECLIPSES=[
+ ["2025-03-14","Total","পূর্ণ চন্দ্রগ্রহণ"],
+ ["2025-09-07","Total","পূর্ণ চন্দ্রগ্রহণ"],
+ ["2026-03-03","Total","পূর্ণ চন্দ্রগ্রহণ"],
+ ["2026-08-28","Partial","আংশিক চন্দ্রগ্রহণ"],
+ ["2027-02-20","Penumbral","উপচ্ছায়া চন্দ্রগ্রহণ"],
+ ["2027-07-18","Penumbral","উপচ্ছায়া চন্দ্রগ্রহণ"],
+ ["2027-08-17","Penumbral","উপচ্ছায়া চন্দ্রগ্রহণ"],
+ ["2028-01-12","Partial","আংশিক চন্দ্রগ্রহণ"],
+ ["2028-07-06","Partial","আংশিক চন্দ্রগ্রহণ"],
+ ["2028-12-31","Total","পূর্ণ চন্দ্রগ্রহণ"],
+ ["2029-06-26","Total","পূর্ণ চন্দ্রগ্রহণ"],
+ ["2029-12-20","Total","পূর্ণ চন্দ্রগ্রহণ"],
+ ["2030-06-15","Partial","আংশিক চন্দ্রগ্রহণ"],
+ ["2030-12-09","Penumbral","উপচ্ছায়া চন্দ্রগ্রহণ"],
+ ["2031-05-09","Penumbral","উপচ্ছায়া চন্দ্রগ্রহণ"],
+ ["2031-06-05","Penumbral","উপচ্ছায়া চন্দ্রগ্রহণ"],
+ ["2031-10-30","Penumbral","উপচ্ছায়া চন্দ্রগ্রহণ"],
+ ["2032-04-25","Total","পূর্ণ চন্দ্রগ্রহণ"],
+ ["2032-10-18","Total","পূর্ণ চন্দ্রগ্রহণ"]
+];
+
+function moonAgeDays(date){
+
+ let diff=(date.getTime()-REF_NEW_MOON)/86400000;
+ let age=diff%SYNODIC_MONTH;
+
+ if(age<0)age+=SYNODIC_MONTH;
+
+ return age;
+}
+
+
+function moonInfo(date){
+
+ let age=moonAgeDays(date);
+ let t=age/SYNODIC_MONTH;
+ let theta=t*2*Math.PI;
+
+ let illum=(1-Math.cos(theta))/2;
+ let angle=t*360;
+ let waxing=t<0.5;
+
+ let idx=Math.floor(((age+1.845825)/3.6913765))%8;
+
+ return{
+  age,t,illum,angle,waxing,idx,
+  nameEn:MOON_NAME_EN[idx],
+  nameBn:MOON_NAME_BN[idx]
+ };
+}
+
+
+function nextFullMoon(from){
+
+ let age=moonAgeDays(from);
+ let days=(SYNODIC_MONTH/2-age+SYNODIC_MONTH)%SYNODIC_MONTH;
+
+ return new Date(from.getTime()+days*86400000);
+}
+
+
+function nextNewMoon(from){
+
+ let age=moonAgeDays(from);
+ let days=(SYNODIC_MONTH-age)%SYNODIC_MONTH;
+
+ return new Date(from.getTime()+days*86400000);
+}
+
+
+function nextLunarEclipse(from){
+
+ let f=from.getTime()-86400000;
+
+ for(const[d,type,bn] of LUNAR_ECLIPSES){
+
+  let dt=new Date(d+"T12:00:00Z");
+
+  if(dt.getTime()>=f){
+   return{date:dt,type,bn};
+  }
+ }
+
+ return null;
+}
+
+
+function daysBetween(a,b){
+ return Math.max(0,Math.round((b.getTime()-a.getTime())/86400000));
+}
+
+
+function moonDiscHTML(illum,waxing,size,mini){
+
+ let pct=Math.max(0,Math.min(100,illum*100));
+ let shift=waxing?-pct:pct;
+
+ return `<div class="moonDisc${mini?" mini":""}" style="width:${size}px;height:${size}px">
+  <div class="moonBase"></div>
+  <div class="moonShadow" style="transform:translateX(${shift}%)"></div>
+ </div>`;
+}
+
+
+/* FULL CALENDAR SYSTEM */
+
+let calDate=new Date();
+calDate.setDate(1);
+
+let selectedDate=new Date();
+
+
+function dateKey(d){
+
+ return [
+  d.getFullYear(),
+  String(d.getMonth()+1).padStart(2,"0"),
+  String(d.getDate()).padStart(2,"0")
+ ].join("-");
+}
+
+
+function formatGregorian(d){
+
+ return `${d.getDate()} ${MONTH_BN[d.getMonth()]} ${d.getFullYear()}`;
+}
+
+
+function buildMoonPanel(){
+
+ let now=new Date();
+ let tmrw=new Date(now.getTime()+86400000);
+
+ let mi=moonInfo(now);
+ let mt=moonInfo(tmrw);
+
+ let nf=nextFullMoon(now);
+ let nn=nextNewMoon(now);
+ let ne=nextLunarEclipse(now);
+
+ return `
+
+ <div class="moonPanel">
+
+  <div class="moonPanelHead">
+   <div class="small">MOON PHASE • চাঁদের কলা</div>
+  </div>
+
+  <div class="moonMainRow">
+
+   <div class="moonMainCol">
+    ${moonDiscHTML(mi.illum,mi.waxing,104,false)}
+    <div class="moonPhaseName">${mi.nameEn}</div>
+    <div class="moonPhaseNameBn">${mi.nameBn} • আজ</div>
+    <div class="moonStats">
+     <span>${Math.round(mi.illum*100)}% আলোকিত</span>
+     <span>${mi.angle.toFixed(0)}° কলা কোণ</span>
+     <span>বয়স ${mi.age.toFixed(1)} দিন</span>
+    </div>
+   </div>
+
+   <div class="moonArrow">→</div>
+
+   <div class="moonNextCol">
+    ${moonDiscHTML(mt.illum,mt.waxing,58,false)}
+    <div class="moonNextLabel">আগামীকাল</div>
+    <div class="moonPhaseNameBn">${mt.nameBn}</div>
+    <div class="moonStatsSmall">
+     <span>${Math.round(mt.illum*100)}%</span>
+     <span>${mt.angle.toFixed(0)}°</span>
+    </div>
+   </div>
+
+  </div>
+
+  <div class="moonEventsGrid">
+
+   <div class="moonEvent">
+    <div class="me-label">পরবর্তী অমাবস্যা</div>
+    <div class="me-date">${formatGregorian(nn)}</div>
+    <div class="me-count">${daysBetween(now,nn)} দিন বাকি</div>
+   </div>
+
+   <div class="moonEvent">
+    <div class="me-label">পরবর্তী পূর্ণিমা</div>
+    <div class="me-date">${formatGregorian(nf)}</div>
+    <div class="me-count">${daysBetween(now,nf)} দিন বাকি</div>
+   </div>
+
+   <div class="moonEvent ${ne?"me-eclipse":""}">
+    <div class="me-label">পরবর্তী চন্দ্রগ্রহণ</div>
+    <div class="me-date">${ne?formatGregorian(ne.date)+" • "+ne.bn:"তথ্য নেই"}</div>
+    <div class="me-count">${ne?daysBetween(now,ne.date)+" দিন বাকি":""}</div>
+   </div>
+
+  </div>
+
+ </div>
+ `;
+}
+
+
+function buildCalendar(){
+
+ let y=calDate.getFullYear();
+ let m=calDate.getMonth();
+
+ let first=new Date(y,m,1);
+ let last=new Date(y,m+1,0);
+
+ /*
+  The Gregorian month can cross a Hijri-month boundary.
+  So each individual day below gets its own Hijri month.
+ */
+
+ let hFirst=hijriParts(first);
+ let hLast=hijriParts(last);
+
+ let html=`
+
+ <div class="calnav">
+
+  <button class="calbtn" onclick="changeMonth(-1)">
+   ‹
+  </button>
+
+  <div class="calcenter">
+
+   <div class="cal-hijri-main">
+    ${HM_AR[hFirst.month-1]} ${hFirst.year} هـ
+   </div>
+
+   <div class="cal-greg-small">
+    ${first.toLocaleString("en-US",{month:"short"})} ${y}
+   </div>
+
+  </div>
+
+  <button class="calbtn" onclick="changeMonth(1)">
+   ›
+  </button>
+
+ </div>
+
+ <button class="todayBtn" onclick="goToday()">
+  Go to Today
+ </button>
+
+ ${buildMoonPanel()}
+
+ <div class="calh">
+
+  <div class="cal-ar">
+   ${HM_AR[hFirst.month-1]}
+   ${hFirst.month!==hLast.month ? " → "+HM_AR[hLast.month-1] : ""}
+  </div>
+
+  <div class="cal-bn">
+   ${HM_BN[hFirst.month-1]}
+   ${hFirst.month!==hLast.month ? " → "+HM_BN[hLast.month-1] : ""}
+  </div>
+
+  <div class="cal-year">
+   ${hFirst.year} هـ
+   ${hFirst.year!==hLast.year ? " → "+hLast.year+" هـ" : ""}
+  </div>
+
+  <div class="cal-range">
+   প্রতিটি তারিখের নিচে তার Hijri দিন ও মাস দেখানো হয়েছে
+  </div>
+
+ </div>
+
+ <div class="week">
+ `;
+
+ WD.forEach(x=>{
+  html+=`<div>${x}</div>`;
+ });
+
+ html+=`
+ </div>
+
+ <div class="days">
+ `;
+
+ let start=first.getDay();
+
+ for(let i=0;i<start;i++){
+  html+=`<div class="day empty"></div>`;
+ }
+
+
+ for(let day=1;day<=last.getDate();day++){
+
+  let d=new Date(y,m,day);
+  let h=hijriParts(d);
+
+  let today=new Date();
+
+  let isToday=
+   d.getFullYear()===today.getFullYear() &&
+   d.getMonth()===today.getMonth() &&
+   d.getDate()===today.getDate();
+
+  let isSelected=
+   dateKey(d)===dateKey(selectedDate);
+
+  let mi=moonInfo(d);
+  let isFull=mi.illum>0.97;
+  let isNewMoon=mi.illum<0.03;
+  let eclipseHit=LUNAR_ECLIPSES.find(x=>x[0]===dateKey(d));
+
+  html+=`
+
+   <button
+    class="day ${isToday?"today":""} ${isSelected?"selected":""} ${isFull?"day-fullmoon":""} ${isNewMoon?"day-newmoon":""} ${eclipseHit?"day-eclipse":""}"
+    onclick="selectCalendarDate(${y},${m},${day})">
+
+    ${eclipseHit?`<span class="day-badge" title="${eclipseHit[2]}">✺</span>`:""}
+
+    <div class="hd">
+     ${h.day} ${HM_AR[h.month-1]}
+    </div>
+
+    <div class="cal-hijri-year">
+     ${h.year} هـ
+    </div>
+
+    ${moonDiscHTML(mi.illum,mi.waxing,13,true)}
+
+    <div class="gd">
+     ${day} ${first.toLocaleString("en-US",{month:"short"})}
+    </div>
+
+   </button>
+  `;
+ }
+
+ html+=`
+ </div>
+ `;
+
+
+ let sd=selectedDate;
+ let sh=hijriParts(sd);
+ let sm=moonInfo(sd);
+ let sEclipse=LUNAR_ECLIPSES.find(x=>x[0]===dateKey(sd));
+
+ html+=`
+
+ <div class="selectedDate">
+
+  <div class="sd-title">
+   SELECTED DATE
+  </div>
+
+  <div class="sd-h">
+   ${sh.day} ${HM_AR[sh.month-1]} ${sh.year} هـ
+  </div>
+
+  <div class="sd-g">
+   ${formatGregorian(sd)}
+  </div>
+
+  <div class="sd-bn">
+   ${WD_FULL[sd.getDay()]} • ${sh.day} ${HM_BN[sh.month-1]} ${sh.year} হিজরি
+  </div>
+
+  <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:12px;padding-top:11px;border-top:1px solid #d6b66a22">
+   ${moonDiscHTML(sm.illum,sm.waxing,42,false)}
+   <div style="text-align:left">
+    <div class="moonPhaseName" style="margin-top:0">${sm.nameEn}</div>
+    <div class="moonPhaseNameBn">${sm.nameBn} • ${Math.round(sm.illum*100)}% আলোকিত • ${sm.angle.toFixed(0)}°</div>
+    ${sEclipse?`<div class="moonPhaseNameBn" style="color:#e79a9a;margin-top:3px">${sEclipse[2]}</div>`:""}
+   </div>
+  </div>
+
+ </div>
+ `;
+
+ $("calendar").innerHTML=html;
+}
+
+
+function changeMonth(n){
+
+ calDate=new Date(
+  calDate.getFullYear(),
+  calDate.getMonth()+n,
+  1
+ );
+
+ buildCalendar();
+}
+
+
+function selectCalendarDate(y,m,d){
+
+ selectedDate=new Date(y,m,d);
+
+ buildCalendar();
+}
+
+
+function goToday(){
+
+ let now=new Date();
+
+ calDate=new Date(
+  now.getFullYear(),
+  now.getMonth(),
+  1
+ );
+
+ selectedDate=new Date();
+
+ buildCalendar();
+}
+
+
+buildCalendar();
+
+
+/* TASBIH */
+
+const T=[
+ ["سُبْحَانَ اللَّهِ","SubhanAllah"],
+ ["الْحَمْدُ لِلَّهِ","Alhamdulillah"],
+ ["اللَّهُ أَكْبَرُ","Allahu Akbar"],
+ ["لَا إِلَٰهَ إِلَّا اللَّهُ","La ilaha illallah"],
+ ["أَسْتَغْفِرُ اللَّهَ","Astaghfirullah"],
+ ["سُبْحَانَ اللَّهِ وَبِحَمْدِهِ","SubhanAllahi wa bihamdihi"],
+ ["سُبْحَانَ اللَّهِ الْعَظِيمِ","SubhanAllahil Azim"],
+ ["لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ","La hawla wa la quwwata illa billah"],
+ ["اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ","Allahumma salli ala Muhammad"],
+ ["رَبِّ اغْفِرْ لِي","Rabbi-ghfir li"]
+];
+
+let ts=Number(
+ localStorage.getItem("mt")||0
+);
+
+let sel=0;
+
+$("opts").innerHTML=
+T.map((x,i)=>
+ `<button class="opt ${i?"":"sel"}"
+  onclick="selectT(${i})">
+
+  <span class="ar">${x[0]}</span>
+  <span class="en">${x[1]}</span>
+  <i class="mark"></i>
+
+ </button>`
+).join("");
+
+
+function toggleTMenu(){
+ $("tmenu").classList.toggle("open");
+}
+
+
+function uiT(){
+
+ $("tc").textContent=ts;
+
+ $("ta").textContent=T[sel][0];
+ $("te").textContent=T[sel][1];
+
+ $("tpa").textContent=T[sel][0];
+ $("tpe").textContent=T[sel][1];
+
+ document.querySelectorAll(".opt")
+ .forEach((e,i)=>
+  e.classList.toggle("sel",i==sel)
+ );
+}
+
+
+function selectT(i){
+
+ sel=i;
+ uiT();
+ $("tmenu").classList.remove("open");
+}
+
+
+function inc(){
+
+ ts++;
+
+ localStorage.setItem("mt",ts);
+
+ uiT();
+
+ $("tc").classList.remove("pop");
+ void $("tc").offsetWidth;
+ $("tc").classList.add("pop");
+
+ $("tcircle").classList.remove("pulse");
+ void $("tcircle").offsetWidth;
+ $("tcircle").classList.add("pulse");
+
+ $("tinner").classList.remove("flash");
+ void $("tinner").offsetWidth;
+ $("tinner").classList.add("flash");
+
+ if(navigator.vibrate)
+  navigator.vibrate(12);
+}
+
+
+function resetT(){
+
+ ts=0;
+
+ localStorage.setItem("mt",0);
+
+ uiT();
+}
+
+
+uiT();
+
+
+document.addEventListener("click",e=>{
+
+ if(!$("tmenu").contains(e.target))
+  $("tmenu").classList.remove("open");
+
+});
+
+
+/* QURAN */
+
+const S=[
+"الفاتحة","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس",
+"هود","يوسف","الرعد","إبراهيم","الحجر","النحل","الإسراء","الكهف","مريم","طه",
+"الأنبياء","الحج","المؤمنون","النور","الفرقان","الشعراء","النمل","القصص","العنكبوت","الروم",
+"لقمان","السجدة","الأحزاب","سبأ","فاطر","يس","الصافات","ص","الزمر","غافر",
+"فصلت","الشورى","الزخرف","الدخان","الجاثية","الأحقاف","محمد","الفتح","الحجرات","ق",
+"الذاريات","الطور","النجم","القمر","الرحمن","الواقعة","الحديد","المجادلة","الحشر","الممتحنة",
+"الصف","الجمعة","المنافقون","التغابن","الطلاق","التحريم","الملك","القلم","الحاقة","المعارج",
+"نوح","الجن","المزمل","المدثر","القيامة","الإنسان","المرسلات","النبأ","النازعات","عبس",
+"التكوير","الانفطار","المطففين","الانشقاق","البروج","الطارق","الأعلى","الغاشية","الفجر","البلد",
+"الشمس","الليل","الضحى","الشرح","التين","العلق","القدر","البينة","الزلزلة","العاديات",
+"القارعة","التكاثر","العصر","الهمزة","الفيل","قريش","الماعون","الكوثر","الكافرون","النصر",
+"المسد","الإخلاص","الفلق","الناس"
+];
+
+const EN=[
+"Al-Fatihah","Al-Baqarah","Ali 'Imran","An-Nisa","Al-Ma'idah","Al-An'am","Al-A'raf","Al-Anfal","At-Tawbah","Yunus",
+"Hud","Yusuf","Ar-Ra'd","Ibrahim","Al-Hijr","An-Nahl","Al-Isra","Al-Kahf","Maryam","Ta-Ha",
+"Al-Anbiya","Al-Hajj","Al-Mu'minun","An-Nur","Al-Furqan","Ash-Shu'ara","An-Naml","Al-Qasas","Al-Ankabut","Ar-Rum",
+"Luqman","As-Sajdah","Al-Ahzab","Saba","Fatir","Ya-Sin","As-Saffat","Sad","Az-Zumar","Ghafir",
+"Fussilat","Ash-Shura","Az-Zukhruf","Ad-Dukhan","Al-Jathiyah","Al-Ahqaf","Muhammad","Al-Fath","Al-Hujurat","Qaf",
+"Adh-Dhariyat","At-Tur","An-Najm","Al-Qamar","Ar-Rahman","Al-Waqi'ah","Al-Hadid","Al-Mujadilah","Al-Hashr","Al-Mumtahanah",
+"As-Saff","Al-Jumu'ah","Al-Munafiqun","At-Taghabun","At-Talaq","At-Tahrim","Al-Mulk","Al-Qalam","Al-Haqqah","Al-Ma'arij",
+"Nuh","Al-Jinn","Al-Muzzammil","Al-Muddaththir","Al-Qiyamah","Al-Insan","Al-Mursalat","An-Naba","An-Nazi'at","Abasa",
+"At-Takwir","Al-Infitar","Al-Mutaffifin","Al-Inshiqaq","Al-Buruj","At-Tariq","Al-A'la","Al-Ghashiyah","Al-Fajr","Al-Balad",
+"Ash-Shams","Al-Layl","Ad-Duha","Ash-Sharh","At-Tin","Al-Alaq","Al-Qadr","Al-Bayyinah","Az-Zalzalah","Al-Adiyat",
+"Al-Qari'ah","At-Takathur","Al-Asr","Al-Humazah","Al-Fil","Quraysh","Al-Ma'un","Al-Kawthar","Al-Kafirun","An-Nasr",
+"Al-Masad","Al-Ikhlas","Al-Falaq","An-Nas"
+];
+
+
+$("sl").innerHTML=
+S.map((x,i)=>
+ `<button class="surah"
+  onclick="openQ(${i+1},'${EN[i]}')">
+
+  <span class="sn">${i+1}</span>
+  <span class="sname">${EN[i]}</span>
+  <span class="sar">${x}</span>
+
+ </button>`
+).join("");
+
+
+/* QURAN READER + ROBUST COPY */
+
+let currentAyahs=[];
+
+
+function esc(x){
+
+ return String(x).replace(
+  /[&<>"']/g,
+  m=>({
+   "&":"&amp;",
+   "<":"&lt;",
+   ">":"&gt;",
+   '"':"&quot;",
+   "'":"&#039;"
+  }[m])
+ );
+}
+
+
+async function openQ(id,name){
+
+ $("reader").classList.add("show");
+
+ $("rtitle").textContent=name;
+ $("rsub").textContent="Surah "+id;
+
+ $("rb").innerHTML=
+ `<p style="
+  text-align:center;
+  color:#81978f;
+  padding:30px
+ ">Loading...</p>`;
+
+
+ try{
+
+  let arabicURL=
+   "https://api.alquran.cloud/v1/surah/"+id;
+
+  let banglaURL=
+   "https://api.alquran.cloud/v1/surah/"+id+"/bn.bengali";
+
+  let [arRes,bnRes]=
+   await Promise.all([
+    fetch(arabicURL),
+    fetch(banglaURL)
+   ]);
+
+  if(!arRes.ok)
+   throw new Error("Arabic API failed");
+
+  let arData=await arRes.json();
+
+  let bnData=null;
+
+  if(bnRes.ok)
+   bnData=await bnRes.json();
+
+  currentAyahs=
+   arData.data.ayahs.map((a,i)=>({
+
+    number:a.numberInSurah,
+    text:a.text,
+    translation:
+     bnData &&
+     bnData.data &&
+     bnData.data.ayahs[i]
+     ?bnData.data.ayahs[i].text
+     :""
+
+   }));
+
+
+  $("rb").innerHTML=
+   currentAyahs.map((a,i)=>
+
+    `<article class="ayahbox">
+
+     <div class="abhead">
+
+      <div class="anum">
+       AYAH ${a.number}
+      </div>
+
+      <button
+       class="copy"
+       type="button"
+       data-copy-index="${i}"
+       aria-label="Copy Ayah">
+       ⧉
+      </button>
+
+     </div>
+
+     <div class="qara">${esc(a.text)}</div>
+
+     ${
+      a.translation
+      ?
+      `<div class="qtr">${esc(a.translation)}</div>`
+      :""
+     }
+
+    </article>`
+
+   ).join("");
+
+
+ }catch(e){
+
+  $("rb").innerHTML=
+  `<p style="
+   text-align:center;
+   color:#81978f;
+   padding:40px
+  ">
+   Unable to load Quran.
+   <br>
+   Check your internet connection and try again.
+  </p>`;
+
+ }
+
+}
+
+
+/*
+  COPY EVENT
+*/
+
+$("rb").addEventListener("click",function(e){
+
+ let btn=e.target.closest(".copy");
+
+ if(!btn)return;
+
+ e.preventDefault();
+ e.stopPropagation();
+
+ let i=parseInt(
+  btn.dataset.copyIndex,
+  10
+ );
+
+ if(
+  Number.isNaN(i) ||
+  !currentAyahs[i]
+ )return;
+
+ copyAyah(
+  btn,
+  currentAyahs[i].text
+ );
+
+});
+
+
+/*
+  COPY FUNCTION
+  Multiple fallbacks for Android/Acode/WebView.
+*/
+
+async function copyAyah(btn,text){
+
+ let success=false;
+
+ /* 1 — Clipboard API */
+
+ try{
+
+  if(
+   navigator.clipboard &&
+   navigator.clipboard.writeText
+  ){
+
+   await navigator.clipboard.writeText(text);
+
+   success=true;
+  }
+
+ }catch(e){}
+
+
+ /* 2 — Android/WebView legacy copy */
+
+ if(!success){
+
+  try{
+
+   const area=document.createElement("textarea");
+
+   area.value=text;
+
+   area.readOnly=true;
+
+   area.style.position="fixed";
+   area.style.left="0";
+   area.style.top="0";
+   area.style.width="1px";
+   area.style.height="1px";
+   area.style.padding="0";
+   area.style.border="0";
+   area.style.opacity="0";
+   area.style.pointerEvents="none";
+
+   document.body.appendChild(area);
+
+   area.focus();
+   area.select();
+   area.setSelectionRange(
+    0,
+    text.length
+   );
+
+   success=document.execCommand("copy");
+
+   area.blur();
+   area.remove();
+
+  }catch(e){
+   success=false;
+  }
+
+ }
+
+
+ /* 3 — Another selection fallback */
+
+ if(!success){
+
+  try{
+
+   const area=document.createElement("textarea");
+
+   area.value=text;
+
+   area.style.position="absolute";
+   area.style.left="-9999px";
+
+   document.body.appendChild(area);
+
+   const range=document.createRange();
+
+   range.selectNodeContents(area);
+
+   const selection=window.getSelection();
+
+   selection.removeAllRanges();
+   selection.addRange(range);
+
+   success=document.execCommand("copy");
+
+   selection.removeAllRanges();
+   area.remove();
+
+  }catch(e){
+   success=false;
+  }
+
+ }
+
+
+ if(success){
+
+  copied(btn);
+
+ }else{
+
+  $("toast").textContent=
+   "Copy failed — long press the Ayah";
+
+  $("toast").classList.add("show");
+
+  setTimeout(
+   ()=>$("toast").classList.remove("show"),
+   1800
+  );
+
+ }
+
+}
+
+
+function copied(btn){
+
+ btn.classList.add("ok");
+ btn.textContent="✓";
+
+ $("toast").textContent=
+  "Ayah copied";
+
+ $("toast").classList.add("show");
+
+ setTimeout(()=>{
+
+  btn.classList.remove("ok");
+  btn.textContent="⧉";
+
+  $("toast").classList.remove("show");
+
+ },1200);
+
+}
+
+
+function closeQ(){
+ $("reader").classList.remove("show");
+}
+
+
+/* QIBLA */
+
+const KLAT=21.4225;
+const KLON=39.8262;
+
+const D={
+ lat:24.0023,
+ lon:90.4264
+};
+
+const rad=x=>x*Math.PI/180;
+const deg=x=>x*180/Math.PI;
+
+let lat=D.lat;
+let lon=D.lon;
+let qb=0;
+let started=0;
+
+
+function qibla(a,b){
+
+ let y=
+  Math.sin(rad(KLON-b))*
+  Math.cos(rad(KLAT));
+
+ let x=
+  Math.cos(rad(a))*Math.sin(rad(KLAT))
+  -
+  Math.sin(rad(a))*
+  Math.cos(rad(KLAT))*
+  Math.cos(rad(KLON-b));
+
+ return(
+  deg(Math.atan2(y,x))+360
+ )%360;
+
+}
+
+
+function setNeedle(){
+
+ $("needle").style.transform=
+  `translate(-50%,-100%) rotate(${qb}deg)`;
+
+}
+
+
+function loc(){
+
+ if(!navigator.geolocation){
+
+  qb=qibla(lat,lon);
+  setNeedle();
+
+  $("cloc").textContent=
+   "Default location";
+
+  $("deg").textContent=
+   "Qibla — "+qb.toFixed(0)+"°";
+
+  return;
+
+ }
+
+
+ navigator.geolocation.getCurrentPosition(
+
+  p=>{
+
+   lat=p.coords.latitude;
+   lon=p.coords.longitude;
+
+   $("cloc").textContent=
+    "Current location";
+
+   qb=qibla(lat,lon);
+   setNeedle();
+
+   $("deg").textContent=
+    "Qibla — "+qb.toFixed(0)+"°";
+
+  },
+
+  ()=>{
+
+   $("cloc").textContent=
+    "Default location";
+
+   qb=qibla(lat,lon);
+   setNeedle();
+
+   $("deg").textContent=
+    "Qibla — "+qb.toFixed(0)+"°";
+
+  },
+
+  {
+   enableHighAccuracy:true,
+   timeout:8000
+  }
+
+ );
+
+}
+
+
+/* ACCORDION UTILS (Compass / Today's Prayer) */
+
+function toggleUtil(id){
+
+ let el=$(id);
+ let isOpen=el.classList.contains("show");
+
+ $("cp").classList.remove("show");
+ $("trk").classList.remove("show");
+ $("calWrap").classList.remove("show");
+
+ if(isOpen)return;
+
+ el.classList.add("show");
+
+ if(id=="cp"){
+  loc();
+ }else if(id=="trk"){
+  renderTrack();
+ }else if(id=="calWrap"){
+  buildCalendar();
+ }
+
+ el.scrollIntoView({behavior:"smooth",block:"nearest"});
+
+}
+
+
+function screenAngle(){
+
+ try{
+
+  if(screen.orientation && typeof screen.orientation.angle=="number")
+   return screen.orientation.angle;
+
+  if(typeof window.orientation=="number")
+   return window.orientation;
+
+ }catch(e){}
+
+ return 0;
+
+}
+
+
+function orient(e){
+
+ let h=null;
+
+ if(typeof e.webkitCompassHeading=="number"){
+
+  /* iOS: already a true compass heading */
+  h=e.webkitCompassHeading;
+
+ }else if(
+  typeof e.alpha=="number" &&
+  (e.absolute===true || e.type=="deviceorientationabsolute")
+ ){
+
+  h=(360-e.alpha+screenAngle())%360;
+
+ }
+
+ if(h==null){
+
+  $("cstatus").textContent=
+   "Calibrating… move your phone in a figure-8.";
+
+  return;
+
+ }
+
+ $("dial").style.transform=
+  `rotate(${(-h+360)%360}deg)`;
+
+ $("cstatus").textContent=
+  "Compass active • align the gold arrow with the Kaaba mark.";
+
+}
+
+
+async function startCompass(){
+
+ if(typeof DeviceOrientationEvent=="undefined"){
+
+  $("cstatus").textContent=
+   "Compass sensor unavailable on this device.";
+
+  return;
+
+ }
+
+
+ if(
+  typeof DeviceOrientationEvent.requestPermission
+  =="function"
+ ){
+
+  try{
+
+   if(
+    await DeviceOrientationEvent.requestPermission()
+    !="granted"
+   ){
+
+    $("cstatus").textContent=
+     "Compass permission denied.";
+
+    return;
+
+   }
+
+  }catch(e){
+
+   return;
+
+  }
+
+ }
+
+
+ if(!started){
+
+  let gotAbsolute=false;
+
+  let absoluteHandler=e=>{
+   gotAbsolute=true;
+   orient(e);
+  };
+
+  addEventListener(
+   "deviceorientationabsolute",
+   absoluteHandler,
+   true
+  );
+
+  addEventListener(
+   "deviceorientation",
+   e=>{
+    if(!gotAbsolute)orient(e);
+   },
+   true
+  );
+
+  started=1;
+
+ }
+
+
+ $("comp").classList.add("active");
+
+ $("cstatus").textContent=
+  "Compass enabled. Move your phone slowly for calibration.";
+
+}
+
+
+/* TODAY PRAYER TRACKER */
+
+const DEF_HAPPY="😊";
+const DEF_SAD="😞";
+
+const HAPPY_OPTS=["😊","😄","🙂","😇","🤗","👍","✨","🌟"];
+const SAD_OPTS=["😞","😔","🙁","😢","😟","👎","💤","⏳"];
+
+function todayStr(){
+ let d=new Date();
+ return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+}
+
+function trkKey(name){
+ return "trk_"+todayStr()+"_"+name;
+}
+
+function trkEmoji(kind){
+ try{
+  return kind=="happy"
+   ?(localStorage.getItem("trkHappy")||DEF_HAPPY)
+   :(localStorage.getItem("trkSad")||DEF_SAD);
+ }catch(e){
+  return kind=="happy"?DEF_HAPPY:DEF_SAD;
+ }
+}
+
+let trkCurrent=null;
+let lastTrkDay=todayStr();
+
+function renderTrack(){
+
+ lastTrkDay=todayStr();
+
+ $("trkList").innerHTML=P.map(x=>{
+
+  let v=null;
+
+  try{
+   v=localStorage.getItem(trkKey(x[0]));
+  }catch(e){}
+
+  let icon=
+   v=="yes"?trkEmoji("happy"):
+   v=="no"?trkEmoji("sad"):
+   "○";
+
+  let mark=
+   v=="yes"?`<span class="trk-mark yes">✓</span>`:
+   v=="no"?`<span class="trk-mark no">✗</span>`:
+   `<span class="trk-mark pending">—</span>`;
+
+  return `<button class="trk-row" onclick="openTrack('${x[0]}')">
+   <div class="trk-icon ${v||""}">${icon}</div>
+   <div class="trk-info">
+    <div class="trk-name">${x[0]}</div>
+    <div class="trk-ar">${x[1]}</div>
+   </div>
+   ${mark}
+  </button>`;
+
+ }).join("");
+
+}
+
+
+function refreshTrack(){
+
+ P.forEach(x=>{
+
+  try{
+   localStorage.removeItem(trkKey(x[0]));
+  }catch(e){}
+
+ });
+
+ renderTrack();
+
+ $("toast").textContent="Today's prayer list refreshed";
+ $("toast").classList.add("show");
+
+ setTimeout(
+  ()=>$("toast").classList.remove("show"),
+  1200
+ );
+
+}
+
+
+function openTrack(name){
+
+ trkCurrent=name;
+
+ let p=P.find(x=>x[0]==name);
+
+ $("pmname").textContent=name;
+ $("pmar").textContent=p?p[1]:"";
+
+ $("pmYesIcon").textContent=trkEmoji("happy");
+ $("pmNoIcon").textContent=trkEmoji("sad");
+
+ $("pmodal").classList.add("show");
+
+}
+
+
+function closeTrack(){
+ $("pmodal").classList.remove("show");
+ trkCurrent=null;
+}
+
+
+function allPrayed(){
+
+ return P.every(x=>{
+
+  let v=null;
+
+  try{
+   v=localStorage.getItem(trkKey(x[0]));
+  }catch(e){}
+
+  return v=="yes";
+
+ });
+
+}
+
+
+function setTrack(val){
+
+ if(!trkCurrent)return;
+
+ try{
+  localStorage.setItem(
+   trkKey(trkCurrent),
+   val?"yes":"no"
+  );
+ }catch(e){}
+
+ closeTrack();
+ renderTrack();
+
+ if(val && allPrayed())celebrate();
+
+}
+
+
+function celebrate(){
+ $("celeb").classList.add("show");
+}
+
+
+function closeCeleb(){
+ $("celeb").classList.remove("show");
+}
+
+
+/* EMOJI PICKER */
+
+function buildEpick(id,opts,kind){
+
+ $(id).innerHTML=opts.map(e=>
+  `<button type="button"
+    class="epick-opt ${e==trkEmoji(kind)?"sel":""}"
+    onclick="pickEmoji('${kind}','${e}')">${e}</button>`
+ ).join("");
+
+}
+
+function openEmojiPicker(){
+
+ buildEpick("epickHappy",HAPPY_OPTS,"happy");
+ buildEpick("epickSad",SAD_OPTS,"sad");
+
+ $("emojiModal").classList.add("show");
+
+}
+
+function closeEmojiPicker(){
+ $("emojiModal").classList.remove("show");
+ renderTrack();
+}
+
+function pickEmoji(kind,val){
+
+ try{
+  localStorage.setItem(
+   kind=="happy"?"trkHappy":"trkSad",
+   val
+  );
+ }catch(e){}
+
+ buildEpick("epickHappy",HAPPY_OPTS,"happy");
+ buildEpick("epickSad",SAD_OPTS,"sad");
+
+}
+
+
+/* AUTO REFRESH AT MIDNIGHT */
+
+function scheduleMidnight(){
+
+ let now=new Date();
+ let next=new Date(
+  now.getFullYear(),
+  now.getMonth(),
+  now.getDate()+1,
+  0,0,2
+ );
+
+ setTimeout(()=>{
+  renderTrack();
+  scheduleMidnight();
+ },next-now);
+
+}
+
+scheduleMidnight();
+
+setInterval(()=>{
+ if(todayStr()!=lastTrkDay)renderTrack();
+},60000);
+
+
+renderTrack();
+
+
+/* BACK BUTTON */
+
+let lastBack=0;
+
+
+document.addEventListener(
+ "keydown",
+ e=>{
+
+  if(e.key==="Escape"){
+
+   if(
+    $("reader").classList.contains("show")
+   ){
+
+    closeQ();
+
+   }else if(current!="home"){
+
+    backSection();
+
+   }
+
+  }
+
+ }
+);
+
+
+document.addEventListener(
+ "backbutton",
+ ()=>handleBack()
+);
+
+
+function exitApp(){
+
+ try{
+  if(window.AndroidNative && typeof window.AndroidNative.exitApp==="function"){
+   window.AndroidNative.exitApp();
+   return;
+  }
+ }catch(e){}
+
+ try{
+  if(navigator.app && typeof navigator.app.exitApp==="function"){
+   navigator.app.exitApp();
+   return;
+  }
+ }catch(e){}
+
+ try{
+  if(typeof window.close==="function"){
+   window.close();
+   return;
+  }
+ }catch(e){}
+
+}
+
+
+function handleBack(){
+
+ /* step 1: close whatever overlay/modal is open on top, one at a time */
+
+ if($("emojiModal").classList.contains("show")){
+  closeEmojiPicker();
+  return;
+ }
+
+ if($("celeb").classList.contains("show")){
+  closeCeleb();
+  return;
+ }
+
+ if($("pmodal").classList.contains("show")){
+  closeTrack();
+  return;
+ }
+
+ if($("reader").classList.contains("show")){
+  closeQ();
+  return;
+ }
+
+ if($("cp").classList.contains("show")){
+  $("cp").classList.remove("show");
+  return;
+ }
+
+ if($("trk").classList.contains("show")){
+  $("trk").classList.remove("show");
+  return;
+ }
+
+ if($("calWrap").classList.contains("show")){
+  $("calWrap").classList.remove("show");
+  return;
+ }
+
+ /* step 2: no overlay open — if we're inside any non-home section, go to app home */
+
+ if(current!="home"){
+  backSection();
+  return;
+ }
+
+ /* step 3: already at app home with nothing open — need a second quick press to exit */
+
+ let now=Date.now();
+
+ if(now-lastBack<1800){
+
+  lastBack=0;
+  exitApp();
+  return;
+
+ }
+
+ lastBack=now;
+
+ $("toast").textContent=
+  "Press back again to exit";
+
+ $("toast").classList.add("show");
+
+
+ setTimeout(
+  ()=>$("toast").classList.remove("show"),
+  1600
+ );
+
+}
+
+</script>
+
+</body>
+</html>
